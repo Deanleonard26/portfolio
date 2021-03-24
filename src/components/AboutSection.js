@@ -7,37 +7,33 @@ import {titleAnim, fade, photoAnim} from '../animation'
 import Wave from './Wave'
 
 const AboutSection = () => {
-
   return (
     <About>
       <Description>
-        <motion.div className="title">
+        <motion.div>
           <Hide>
-            <motion.h2 variants={titleAnim}>
-            We work to make
-            </motion.h2>
+            <motion.h2 variants={titleAnim}>DEAN</motion.h2>
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnim}>
-              your <span>dreams</span> come
+              <span>LEONARD</span> 
             </motion.h2>
           </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
-          </Hide>
+         
         </motion.div>
         <motion.p variants={fade}>
-          Contact us for any motion.photography or videography ideas that you have. We
-          have professionals with amazing skills.
+         Frontend Developer
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <motion.button variants={fade}>Contact Me</motion.button>
       </Description>
       <Image>
-        <motion.img src={home1} variants={photoAnim} alt="guy with a camera" />
+        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
       </Image>
       <Wave />
     </About>
   );
 };
+
+//Styled Components
 
 export default AboutSection;
