@@ -1,11 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-import athlete from '../images/athlete-small.png'
-import theracer from '../images/theracer-small.png'
-import goodtimes from '../images/goodtimes-small.png';
 import {motion} from 'framer-motion';
-import {pageAnimation, fade, photoAnim, lineAnim, slider, sliderContainer} from '../animation'
+import {pageAnimation, fade, photoAnim, slider, sliderContainer} from '../animation'
 import useScroll from '../components/useScroll'
 import ScrollTop from '../components/ScrollTop'
 
@@ -86,7 +83,7 @@ const OurWork = () => {
         >
           <h2>Good Times</h2>
           <Link to="/work/good-times">
-            <img src={authors2} alt="goodtimes" />
+            <img src={temp1} alt="goodtimes" />
           </Link>
         </Movie>
         <ScrollTop />
