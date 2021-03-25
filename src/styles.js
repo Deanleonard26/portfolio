@@ -10,9 +10,7 @@ export const About = styled(motion.div)`
   color: white;
 
   @media (max-width: 1300px) {
-       display:block;
-       padding: 2rem 1rem;
-       text-align:center; 
+       padding: 1rem 3rem;
        width:100%;
       }
 `;
@@ -20,28 +18,85 @@ export const Description = styled.div`
   flex: 1;
   z-index:2;
   padding-right: 5rem;
+  margin-bottom:2rem;
   h2 {
     font-weight: lighter;
-    font-size:70px;
+    font-size:75px;
   }
 
   button {
     outline:none;
+    width:150px;
 
   }
+  
+  .portfolio-info {
+    p {
+      width: 60%;
+    }
+    
+    button {
+      height:50px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      margin: 2rem 0rem 5rem 0rem; 
+      
+    }
+    align-items:center;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between
 
-  @media (max-width: 1300px) {
+    
+  }
+
+      @media (max-width: 1300px) {
         padding:0;
         
-        h2 {
+        /* h2 {
           font-weight: lighter;
           font-size:40px;
-        }
+        } */
 
         button {
-          margin: 2rem 0rem 5rem 0rem; 
+          margin: 2rem 0rem 0rem 0rem; 
         }
       }
+
+      @media (max-width: 835px) {
+        h2 {font-size: 50px;
+        }
+      }
+
+      @media (max-width: 800px) {
+          .portfolio-info {
+          p {
+            font-size:13px;
+        }
+          button {
+          align-items:center;
+          width: 100px;
+        }
+      }
+      }
+
+      @media (max-width: 450px) {
+      
+          .portfolio-info {
+          p {
+            font-size:10px;
+        }
+          button {
+          align-items:center;
+          width: 90px;
+        }
+      }
+      }
+
+  
 `;
 export const Image = styled.div`
   flex: 1;

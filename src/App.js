@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
 import MovieDetail from './pages/MovieDetail';
+import Drone from './pages/Drone'
 // Router
 import {Switch, Route, useLocation} from 'react-router-dom';
 // Animation
@@ -35,6 +36,10 @@ function App() {
       <Route path='/work' exact>
         <OurWork />
       </Route>
+
+      {/* <Route path='/drone' exact>
+        <Drone />
+      </Route> */}
 
       </Switch>
       </AnimatePresence>

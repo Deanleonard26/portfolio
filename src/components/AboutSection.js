@@ -12,23 +12,27 @@ const AboutSection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2 variants={titleAnim}>DEAN</motion.h2>
+            <motion.h2 variants={titleAnim}>Hi,</motion.h2>
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnim}>
-              <span>LEONARD</span> 
+              I'm <span>Dean,</span> 
             </motion.h2>
           </Hide>
-         
+          <Hide>
+            <motion.h2 variants={titleAnim}>
+            A <span>Web </span> Developer
+            </motion.h2>
+          </Hide>
         </motion.div>
         <motion.p variants={fade}>
-         Frontend Developer
+         Frontend Developer / Design Enthusiast
         </motion.p>
         <motion.button variants={fade}>Contact Me</motion.button>
       </Description>
-      <Image>
+      {/* <Image>
         <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
-      </Image>
+      </Image> */}
       <Wave />
     </About>
   );

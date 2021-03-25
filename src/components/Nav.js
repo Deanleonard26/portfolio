@@ -10,12 +10,12 @@ const Nav = () => {
     <StyledNav>
       <h1>
         <Link id="logo" to="/">
-          Capture
+          Dean Leonard
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Us</Link>
+          <Link to="/">About</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -23,7 +23,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">2. Our Work</Link>
+          <Link to="/work">Work</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -31,13 +31,21 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">3. Contact Us</Link>
+          <Link to="/contact">Contact</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
             animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
           />
         </li>
+        {/* <li>
+          <Link to="/drone">Drone</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+          />
+        </li> */}
       </ul>
     </StyledNav>
   );
@@ -60,6 +68,7 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
+    padding-right:2rem;
   }
   #logo {
     font-size: 1.5rem;
@@ -73,12 +82,12 @@ const StyledNav = styled.nav`
   @media (max-width: 1300px) {
     padding: 1rem;
     #logo {
-      margin: 1rem;
+      margin: 2rem;
     }
     ul {
       padding: 2rem;
       justify-content: space-around;
-      width: 100%;
+      width: 50%;
       li {
         padding: 0;
       }
