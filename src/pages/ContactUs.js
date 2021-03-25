@@ -53,7 +53,7 @@ const ContactUs = () => {
           </Hide>
           </ContactWrapper>
         <MapWrapper>
-        <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38433.641312215295!2d-6.077855057978327!3d52.982556555769555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867b0b5d9502859%3A0x284e79fbf541a3e7!2sWicklow!5e0!3m2!1sen!2sie!4v1616688732715!5m2!1sen!2sie" ></iframe>
+        <iframe title='map' className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38433.641312215295!2d-6.077855057978327!3d52.982556555769555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867b0b5d9502859%3A0x284e79fbf541a3e7!2sWicklow!5e0!3m2!1sen!2sie!4v1616688732715!5m2!1sen!2sie" ></iframe>
         </MapWrapper>
       </ContactStyle>
     );

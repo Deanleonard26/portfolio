@@ -50,6 +50,7 @@ const OurWork = () => {
         <Movie
           ref={element2}
           variants={fade}
+          animate={controls2}
         >
           <h2>Good Times</h2>
           <Link to="/work/good-times">

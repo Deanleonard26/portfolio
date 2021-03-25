@@ -1,7 +1,7 @@
 import React from "react";
 //Import Icons
 //Styles
-import { About, Description, Image } from "../styles";
+import { About, Description } from "../styles";
 import styled from "styled-components";
 import {scrollReveal} from '../animation'
 import useScroll from './useScroll';

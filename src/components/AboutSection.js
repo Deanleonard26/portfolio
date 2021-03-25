@@ -1,9 +1,8 @@
 import React from "react";
-import home1 from "../images/home1.png";
-import { About, Description, Image, Hide } from "../styles";
+import { About, Description, Hide } from "../styles";
 // Framer Motion
 import {motion} from 'framer-motion'
-import {titleAnim, fade, photoAnim} from '../animation'
+import {titleAnim, fade} from '../animation'
 import Wave from './Wave'
 
 const AboutSection = () => {

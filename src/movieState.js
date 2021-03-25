@@ -4,7 +4,7 @@ import temp1 from './images/temp1.png'
 import cafe1 from './images/cafe1.png'
 import mailio1 from './images/mailio1.png';
 import safe1 from './images/safe1.png';
-import authors2 from './images/authors2.png';
+// import authors2 from './images/authors2.png';
 
 export const MovieState = () => {
   return [

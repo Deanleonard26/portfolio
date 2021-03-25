@@ -35,7 +35,7 @@ const MovieDetail = () => {
                     ))}
                 </Awards>
                 <ImageDisplay>
-                    <img src={movie.secondaryImg} alt='image' />
+                    <img src={movie.secondaryImg} alt='sl' />
                 </ImageDisplay>
             </Details>  
         )}
