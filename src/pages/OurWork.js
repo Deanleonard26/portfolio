@@ -37,7 +37,7 @@ const OurWork = () => {
               </a>
         </Movie>
   
-        <Movie ref={element}  animate={fade} >
+        <Movie ref={element} variants={controls}  animate={fade} >
           {/* <motion.div variants={lineAnim} className="line"></motion.div> */}
           <a href=' https://the-authors.netlify.app/' target='blank'>
             <img src={authors2} alt="authors" />
