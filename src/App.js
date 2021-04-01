@@ -3,7 +3,6 @@ import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
-import MovieDetail from './pages/MovieDetail';
 // import Drone from './pages/Drone'
 // Router
 import {Switch, Route, useLocation} from 'react-router-dom';

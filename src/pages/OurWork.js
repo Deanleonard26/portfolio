@@ -12,11 +12,10 @@ import cafe1 from '../images/cafe1.png'
 import mailio1 from '../images/mailio1.png';
 import safe1 from '../images/safe1.png';
 import authors2 from '../images/authors2.png';
-import MusicDescription from '../components/TempEra'
 
 const OurWork = () => {
     const [element, controls] = useScroll();
-    const [element2, controls2] = useScroll();
+    // const [element2, controls2] = useScroll();
     return (
       <Work
         // style={{ background: "#fff" }}
@@ -145,31 +144,31 @@ const OurWork = () => {
   `;
 
 
-  const Hide = styled.div`
-    overflow: hidden;
-  `;
+  // const Hide = styled.div`
+  //   overflow: hidden;
+  // `;
   
   //Frame Animation
-  const Frame1 = styled(motion.div)`
-    position: fixed;
-    left: 0;
-    top: 10%;
-    width: 100%;
-    height: 100vh;
-    background: #fffebf;
-    z-index: 2;
-  `;
+  // const Frame1 = styled(motion.div)`
+  //   position: fixed;
+  //   left: 0;
+  //   top: 10%;
+  //   width: 100%;
+  //   height: 100vh;
+  //   background: #fffebf;
+  //   z-index: 2;
+  // `;
 
-  const Frame2 = styled(Frame1)`
-    background: #ff8efb;
-  `;
+  // const Frame2 = styled(Frame1)`
+  //   background: #ff8efb;
+  // `;
 
-  const Frame3 = styled(Frame1)`
-    background: #8ed2ff;
-  `;
+  // const Frame3 = styled(Frame1)`
+  //   background: #8ed2ff;
+  // `;
 
-  const Frame4 = styled(Frame1)`
-    background: #8effa0;
-  `;
+  // const Frame4 = styled(Frame1)`
+  //   background: #8effa0;
+  // `;
   
   export default OurWork;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import temp1 from "../images/temp1.png";
 import temp2 from "../images/temp2.png";
 import temp3 from "../images/temp3.png";
@@ -9,9 +9,9 @@ import temp4 from "../images/temp4.png";
 
 const CodeCafe = () => {
   
-//     useEffect(() => {
-//     Aos.init({ duration: 2000 });
-//   }, []);
+    useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <StoryWrapper>
@@ -45,8 +45,8 @@ const CodeCafe = () => {
       <StorySection2>
         <StorySection2Img>
           <img
-            // data-aos="fade-up"
-            // data-aos-duration="2000"
+            data-aos="fade-up"
+            data-aos-duration="2000"
             src={temp3}
             alt="temp"
           />
@@ -114,8 +114,8 @@ const CodeCafe = () => {
         </StorySection3Text>
         <StorySection3Img>
           <img
-            // data-aos="fade-up"
-            // data-aos-duration="3000"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             src={temp4}
             alt="temp"
           />
@@ -314,17 +314,5 @@ const StorySection3Img = styled.div`
   }
 `;
 
-const HR = styled.div`
-  hr {
-    border: 0;
-    background-color: lightgray;
-    display: flex;
-    justify-content: left;
-    width: 85%;
-    height: 4px;
-    margin: 0;
-    padding: 0;
-  }
-`;
 
 export default CodeCafe;
