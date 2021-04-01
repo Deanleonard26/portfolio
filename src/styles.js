@@ -42,6 +42,7 @@ export const Description = styled.div`
       align-items:center;
       text-align:center;
       margin: 2rem 0rem 5rem 0rem; 
+      text-decoration: none;
       
     }
     align-items:center;

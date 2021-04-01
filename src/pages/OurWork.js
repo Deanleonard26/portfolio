@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import {motion} from 'framer-motion';
-import {pageAnimation, fade, photoAnim, slider, sliderContainer} from '../animation'
+import {pageAnimation, fade} from '../animation'
 import useScroll from '../components/useScroll'
 import ScrollTop from '../components/ScrollTop'
 
@@ -12,6 +12,7 @@ import cafe1 from '../images/cafe1.png'
 import mailio1 from '../images/mailio1.png';
 import safe1 from '../images/safe1.png';
 import authors2 from '../images/authors2.png';
+import MusicDescription from '../components/TempEra'
 
 const OurWork = () => {
     const [element, controls] = useScroll();
@@ -24,81 +25,78 @@ const OurWork = () => {
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={sliderContainer}>
+        {/* <motion.div variants={sliderContainer}>
           <Frame1 variants={slider}></Frame1>
           <Frame2 variants={slider}></Frame2>
           <Frame3 variants={slider}></Frame3>
           <Frame4 variants={slider}></Frame4>
-        </motion.div>
+        </motion.div> */}
         <Movie>
-          <motion.h2 variants={fade}>Music Player</motion.h2>
-          <Link to="/work/the-athlete">
-            <Hide>
-              <motion.img variants={photoAnim} src={music1} alt="athlete" />
-            </Hide>
-          </Link>
+          <motion.h2  ref={element} animate={fade}></motion.h2>
+          <a href='https://brave-spence-b5da41.netlify.app/' target="blank">
+              <img src={music1} alt="music" />
+              </a>
         </Movie>
   
-        <Movie ref={element} variants={fade} animate={controls} initial="hidden">
-          <h2>The Racer</h2>
+        <Movie ref={element}  animate={fade} >
           {/* <motion.div variants={lineAnim} className="line"></motion.div> */}
-          <Link to="/work/the-racer">
-            <img src={authors2} alt="theracer" />
-          </Link>
+          <a href=' https://the-authors.netlify.app/' target='blank'>
+            <img src={authors2} alt="authors" />
+            </a>
         </Movie>
   
         <Movie
-          ref={element2}
+          ref={element}
           variants={fade}
-          animate={controls2}
         >
-          <h2>Good Times</h2>
-          <Link to="/work/good-times">
-            <img src={cafe1} alt="goodtimes" />
+          <Link to="/work/cafe">
+            <img src={cafe1} alt="code cafe" />
           </Link>
         </Movie>
 
+  
         <Movie
-          ref={element2}
+        className="span3"
+          ref={element}
           variants={fade}
         >
-          <h2>Good Times</h2>
-          <Link to="/work/good-times">
-            <img src={mailio1} alt="goodtimes" />
-          </Link>
+        <a href=' https://vigilant-sammet-febf50.netlify.app/' target='blank'>
+            <img src={mailio1} alt="mailio" />
+          </a>
         </Movie>
-
+        <div className="span1"></div>
+  
         <Movie
-          ref={element2}
+          ref={element}
           variants={fade}
         >
-          <h2>Good Times</h2>
-          <Link to="/work/good-times">
+        <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
             <img src={safe1} alt="goodtimes" />
+          </a>
+        </Movie>
+
+  
+        <Movie
+          ref={element}
+          variants={fade}
+        >
+          <Link to="/work/temp-era">
+            <img src={temp1} alt="temp" />
           </Link>
         </Movie>
 
-        <Movie
-          ref={element2}
-          variants={fade}
-        >
-          <h2>Good Times</h2>
-          <Link to="/work/good-times">
-            <img src={temp1} alt="goodtimes" />
-          </Link>
-        </Movie>
         <ScrollTop />
       </Work>
     );
   };
   
   const Work = styled(motion.div)`
-    width:100%;
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
     flex-wrap:wrap;
-    align-items:left;
-    justify-content:center;
+    justify-content: center;
+    margin-top: 30px;
 
     @media (max-width: 1300px) {
       padding: 2rem 2rem;
@@ -108,29 +106,44 @@ const OurWork = () => {
       padding: 0rem;
       color: white;
     }
+
   `;
 
   const Movie = styled(motion.div)`
     display:flex;
-    flex-direction:column;
-    align-items:left;
-    justify-content:center;
-      padding-bottom: 3rem;
-      width:450px;
-      height: 350px;
-      margin:20px 10px;
+    margin: 10px;
+    object-fit:cover;
+    overflow:hidden;
       
     .line {
       height: 3rem;
       background: #23d997;
-      margin-bottom: 2rem;
     }
     
     img {
-      width: 100%;
-      height: 300px;
+      width: 400px;
+      height: 280px;
+      opacity: 70%;
+      object-fit:cover;
+
+      &:hover {
+        opacity: 100%;  
+        transition: transform .4s;
+        transform: scale(1.1);
+        cursor:pointer;      
+      }
+    }
+
+    @media (max-width: 500px) {
+      width:100%;
+      
+      img {
+        object-fit:cover;
+        width:320px;
+      }
     }
   `;
+
 
   const Hide = styled.div`
     overflow: hidden;

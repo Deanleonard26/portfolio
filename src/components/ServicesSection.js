@@ -5,6 +5,7 @@ import { About, Description } from "../styles";
 import styled from "styled-components";
 import {scrollReveal} from '../animation'
 import useScroll from './useScroll';
+import {Link} from 'react-router-dom'
 import music1 from '../images/music1.png'
 import temp1 from '../images/temp1.png'
 import cafe1 from '../images/cafe1.png'
@@ -27,7 +28,9 @@ const ServicesSection = () => {
         </h2>
         <div className='portfolio-info'>
         <p>Below are some of the projects I have worked on during my time in the Wild Code School Bootcamp, along with my self learning courses.</p>
+        <Link to="/work"  style={{ textDecoration: "none" }}>
         <button> See More</button>
+        </Link>
         </div>
         <Cards>
           <Card>
@@ -110,7 +113,7 @@ const Cards = styled.div`
   display: grid;
   width:100%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:2px;
+  grid-gap:5px;
   
   @media (max-width: 1300px) {
     justify-content: left;
@@ -134,7 +137,6 @@ const Card = styled.div`
       
       background: white;
       color: black;
-      
     }
   }
   img {

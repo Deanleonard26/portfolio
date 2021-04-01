@@ -9,6 +9,8 @@ import MovieDetail from './pages/MovieDetail';
 import {Switch, Route, useLocation} from 'react-router-dom';
 // Animation
 import {AnimatePresence} from 'framer-motion'
+import TempEra from './components/TempEra';
+import CodeCafe from './components/CodeCafe';
 
 function App() {
   
@@ -29,8 +31,12 @@ function App() {
         <ContactUs />
       </Route>
 
-      <Route path='/work/:id'>
-        <MovieDetail />
+      <Route path='/work/temp-era'>
+        <TempEra />
+      </Route>
+
+      <Route path='/work/cafe'>
+        <CodeCafe />
       </Route>
       
       <Route path='/work' exact>

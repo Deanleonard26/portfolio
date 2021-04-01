@@ -4,8 +4,9 @@ import {pageAnimation, titleAnim} from '../animation';
 import styled from 'styled-components'
 import ScrollTop from '../components/ScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
-import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
+import { faAt, faFile} from '@fortawesome/free-solid-svg-icons';
+import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
+import cv from '../images/DeanLeonard.pdf'
 
 const ContactUs = () => {
 
@@ -38,15 +39,22 @@ const ContactUs = () => {
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
+            <a href = "mailto: deanleonard26@gmail.com" target='blank'>
             <FontAwesomeIcon style={FavStyle} icon={faAt} />
-            <FontAwesomeIcon style={FavStyle} icon={faMobileAlt} />
-          
+            </a>
+            <a href={cv} title="download">
+            <FontAwesomeIcon style={FavStyle} icon={faFile} />
+            </a>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
+            <a href="https://linkedin.com/in/deanleonard1" target='blank'>
             <FontAwesomeIcon style={FavStyle} icon={faLinkedin} />
+            </a>
+            <a href="http://github.com/Deanleonard26" target='blank'>
             <FontAwesomeIcon style={FavStyle} icon={faGithub} />
+            </a>
 
              
             </Social>
@@ -63,9 +71,9 @@ const ContactUs = () => {
     padding: 5rem 5rem;
     display:flex;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:center;
     flex-wrap:wrap;
-    margin: 0rem 5rem;
+    margin: 3rem 5rem;
 
     @media (max-width: 1500px) {
       padding: 1rem;
@@ -78,7 +86,7 @@ const ContactUs = () => {
     margin-bottom: 1rem;
     color: black;
     @media (max-width: 1500px) {
-      margin-top: 5rem;
+      margin-top: 2rem;
     }
   `;
   const Hide = styled.div`
@@ -96,17 +104,41 @@ const ContactUs = () => {
     p {
       width:80%;
     }
+
+    @media(max-width:500px) {
+    p{
+      width: 100%;
+    }
+    }
   `;
 
   const ContactWrapper = styled.div `
-  width:40%;`
+  width:500px;
+  
+  @media(max-width:1200px) {
+    margin-bottom: 80px;
+  
+  }
+
+  `
 
   const MapWrapper = styled.div`
-    iframe {
-      width: 400px;
-      height: 500px;
-      border-radius:5px;
-      border:0;
+
+      iframe {
+        width: 500px;
+        height: 500px;
+        border-radius:5px;
+        border:0;
+      }
+
+    @media(max-width:500px) {
+    
+      iframe {
+        width: 320px;
+        height: 500px;
+        margin-bottom: 100px
+      }
+
     }
   `
   
