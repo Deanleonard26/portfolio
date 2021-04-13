@@ -5,7 +5,6 @@ import {motion} from 'framer-motion';
 import {pageAnimation, fade} from '../animation'
 import useScroll from '../components/useScroll'
 import ScrollTop from '../components/ScrollTop'
-
 import music1 from '../images/music1.png'
 import temp1 from '../images/temp1.png'
 import cafe1 from '../images/cafe1.png'

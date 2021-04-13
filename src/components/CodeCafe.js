@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import temp1 from "../images/temp1.png";
-import temp2 from "../images/temp2.png";
-import temp3 from "../images/temp3.png";
-import temp4 from "../images/temp4.png";
+import cafe1 from "../images/cafe1.png";
+import cafe2 from "../images/cafe2.png";
+
 
 const CodeCafe = () => {
   
@@ -16,110 +15,38 @@ const CodeCafe = () => {
   return (
     <StoryWrapper>
       <Banner>
-        <img src={temp1} alt="banner" />
+        <img src={cafe1} alt="banner" />
       </Banner>
       <StorySection1>
         <StorySection1Text>
-          <h2>Author Name, Location</h2>
+          <h2>Code Cafe</h2>
+          <h3>First Wild Code School Project</h3>
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
-          </p>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
+            Code Cafe was our first group project in Wild Code school that lasted 2 weeks. During this time we created a code cafe website using HTML & CSS    
           </p>
         </StorySection1Text>
-        <StorySection1Img>
-          <img src={temp2} alt="temp" />
-        </StorySection1Img>
+        
       </StorySection1>
       <StorySection2>
         <StorySection2Img>
           <img
             data-aos="fade-up"
             data-aos-duration="2000"
-            src={temp3}
+            src={cafe2}
             alt="temp"
           />
         </StorySection2Img>
-        <h1>"Quote of the story inserted here"</h1>
       </StorySection2>
       <StorySectionMiddle data-aos="fade-up" data-aos-duration="3500">
         <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32. The standard chunk of Lorem Ipsum used since the
-          1500s is reproduced below for those interested. Sections 1.10.32 and
-          1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-          reproduced in their exact original form, accompanied by English
-          versions from the 1914 translation by H. Rackham.
+         My main responsibility for this project was wireframing, design and creating the landing page and about us section.
         </p>
       </StorySectionMiddle>
-      <StorySectionMiddle>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32. The standard chunk of Lorem Ipsum used since the
-          1500s is reproduced below for those interested. Sections 1.10.32 and
-          1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-          reproduced in their exact original form, accompanied by English
-          versions from the 1914 translation by H. Rackham.
-        </p>
-      </StorySectionMiddle>
+      
+      
+     
       <StorySection3>
-        <StorySection3Text>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
-          </p>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
-          </p>
-        </StorySection3Text>
-        <StorySection3Img>
-          <img
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            src={temp4}
-            alt="temp"
-          />
-        </StorySection3Img>
+        
       </StorySection3>
     </StoryWrapper>
   );
@@ -128,16 +55,12 @@ const CodeCafe = () => {
 // SECTION 1
 
 const Banner = styled.div`
-  width: 100vw;
-  height: 100vh;
-  margin-bottom: 200px;
-  overflow: hidden;
+margin-bottom: 100px;
 
   img {
-    width: 100vw;
-    height: 100vh;
-    vertical-align: middle;
-    object-fit: cover;
+    width:60vw;
+    min-width: 60%;
+    height: auto;
   }
 
   @media (max-width: 500px) {
@@ -158,41 +81,45 @@ const StorySection1 = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
   flex-wrap: wrap;
   margin-bottom: 50px;
 `;
 
 const StorySection1Text = styled.div`
-  width: 30%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
   margin: 20px;
   height: auto;
   text-align: left;
 
   h2 {
     font-size: 30px;
+    color:white;
+    margin-bottom:10px;
   }
 
   p {
-    font-size: 12px;
+    width:50%;
+    text-align:center;
+    font-size: 16px;
     line-height: 2em;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 12px;
   }
 
-  @media (max-width: 1100px) {
-    width: 50%;
-  }
 
-  @media (max-width: 500px) {
-    width: 70%;
-  }
 `;
 
 const StorySection1Img = styled.div`
   img {
-    width: 70%;
-    height: 80%;
+    width: 60%;
+    height: auto;
   }
 `;
 
@@ -201,6 +128,7 @@ const StorySection1Img = styled.div`
 const StorySection2 = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content:center;
   text-align: center;
   align-items: center;
   margin-bottom: 100px;
@@ -219,7 +147,8 @@ const StorySection2 = styled.div`
 
 const StorySection2Img = styled.div`
   img {
-    width: 70%;
+    width: 60%;
+    height:auto;
   }
 `;
 
@@ -229,20 +158,25 @@ const StorySectionMiddle = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  align-items:center;
   width: 100%;
   margin-bottom: 100px;
 
   p {
-    width: 40%;
+    color:white;
+    width:50%;
+    font-size: 16px;
     line-height: 2em;
-    margin: 0 100px;
-    margin-bottom: 10px;
+    margin-top: 12px;
   }
 
   @media (max-width: 1100px) {
     p {
-      width: 70%;
+      width: 60%;
       margin: 10px;
+      line-height: 2em;
+    margin: 0 100px;
+    margin-bottom: 10px;
     }
   }
 
@@ -264,16 +198,18 @@ const StorySection3 = styled.div`
   width: 100%;
   justify-content: center;
   text-align: center;
+  align-items:center;
   margin-bottom: 100px;
   margin-top: 100px;
 `;
 
 const StorySection3Text = styled.div`
-  width: 40%;
+  width: 100%;
+  display: flex;
+  justify-content:center;
   text-align: center;
   align-items: center;
   height: auto;
-  margin-left: 0;
 
   img {
     margin-bottom: 100px;
@@ -284,18 +220,19 @@ const StorySection3Text = styled.div`
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.8em;
+    width:50%;
+    font-size: 16px;
+    line-height: 2em;
+    margin-top: 12px;
   }
 
   @media (max-width: 1100px) {
-    width: 70%;
+
   }
 
   @media (max-width: 500px) {
     p {
       margin-top: 50px;
-      width: 100%;
       font-size: 13px;
     }
   }
@@ -304,7 +241,8 @@ const StorySection3Text = styled.div`
 const StorySection3Img = styled.div`
   margin-bottom: 0px;
   img {
-    width: 60%;
+    width: 65%;
+    height:auto;
   }
 
   @media (max-width: 500px) {
@@ -313,6 +251,5 @@ const StorySection3Img = styled.div`
     }
   }
 `;
-
 
 export default CodeCafe;

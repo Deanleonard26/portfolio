@@ -3,7 +3,7 @@ import GlobalStyle from './components/GlobalStyle';
 import Nav from './components/Nav';
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
-// import Drone from './pages/Drone'
+import Drone from './pages/Drone'
 // Router
 import {Switch, Route, useLocation} from 'react-router-dom';
 // Animation
@@ -42,9 +42,9 @@ function App() {
         <OurWork />
       </Route>
 
-      {/* <Route path='/drone' exact>
+      <Route path='/drone' exact>
         <Drone />
-      </Route> */}
+      </Route>
 
       </Switch>
       </AnimatePresence>

@@ -40,7 +40,7 @@ const [dataFromApi, setDataFromApi] = useState([]);
         {dataFromApi.map((post, i) => (
           <ImgWrapper key={i}>
             <img
-              src={post["node"].display_resources[2].src}
+              src={post["node"].display_resources[0].src}
               alt="instagram post"
             />
           </ImgWrapper>

@@ -20,28 +20,22 @@ const TempEra = () => {
       </Banner>
       <StorySection1>
         <StorySection1Text>
-          <h2>Author Name, Location</h2>
+          <h2>Temp era</h2>
+          <h3>24 Hour Hackathon Project</h3>
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
-          </p>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
+            Temp Era was creating in 24 hours in my first hackathon in Wild Code School. Our task was to create an application that would be transported back in time. We chose to create a colorizing application that colorized black and white photos in the Victorian Era. The play on words Temp for temporary and Era also brings a Steampunk look to the application.   
           </p>
         </StorySection1Text>
         <StorySection1Img>
           <img src={temp2} alt="temp" />
         </StorySection1Img>
       </StorySection1>
+      <StorySectionMiddle data-aos="fade-up" data-aos-duration="3500">
+        <p>
+          The user is first greeted with instructions on how to use the application. From there the user can click start to be brought to the image capture screen.
+        </p>
+      </StorySectionMiddle>
+      
       <StorySection2>
         <StorySection2Img>
           <img
@@ -51,67 +45,13 @@ const TempEra = () => {
             alt="temp"
           />
         </StorySection2Img>
-        <h1>"Quote of the story inserted here"</h1>
       </StorySection2>
-      <StorySectionMiddle data-aos="fade-up" data-aos-duration="3500">
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32. The standard chunk of Lorem Ipsum used since the
-          1500s is reproduced below for those interested. Sections 1.10.32 and
-          1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-          reproduced in their exact original form, accompanied by English
-          versions from the 1914 translation by H. Rackham.
-        </p>
-      </StorySectionMiddle>
-      <StorySectionMiddle>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old. Richard McClintock, a Latin professor at
-          Hampden-Sydney College in Virginia, looked up one of the more obscure
-          Latin words, consectetur, from a Lorem Ipsum passage, and going
-          through the cites of the word in classical literature, discovered the
-          undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-          Evil) by Cicero, written in 45 BC. This book is a treatise on the
-          theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-          section 1.10.32. The standard chunk of Lorem Ipsum used since the
-          1500s is reproduced below for those interested. Sections 1.10.32 and
-          1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-          reproduced in their exact original form, accompanied by English
-          versions from the 1914 translation by H. Rackham.
-        </p>
-      </StorySectionMiddle>
-      <StorySection3>
-        <StorySection3Text>
+      <StorySection3Text>
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
-          </p>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word
+            Once the user has taken a picture they can then click colorize which will change the picture from black and white to colour. To Create this illusion, we used a simple javascript that greyscaled an image, then on click, the image would go back to its original colour.
           </p>
         </StorySection3Text>
+      <StorySection3>
         <StorySection3Img>
           <img
             data-aos="fade-up"
@@ -128,16 +68,12 @@ const TempEra = () => {
 // SECTION 1
 
 const Banner = styled.div`
-  width: 100vw;
-  height: 100vh;
-  margin-bottom: 200px;
-  overflow: hidden;
+margin-bottom: 100px;
 
   img {
-    width: 100vw;
-    height: 100vh;
-    vertical-align: middle;
-    object-fit: cover;
+    width:60vw;
+    min-width: 60%;
+    height: auto;
   }
 
   @media (max-width: 500px) {
@@ -158,41 +94,44 @@ const StorySection1 = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
   flex-wrap: wrap;
   margin-bottom: 50px;
 `;
 
 const StorySection1Text = styled.div`
-  width: 30%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
+  align-items:center;
   margin: 20px;
   height: auto;
   text-align: left;
 
   h2 {
     font-size: 30px;
+    color:white;
+    margin-bottom:10px;
   }
 
   p {
-    font-size: 12px;
+    width:50%;
+    font-size: 16px;
     line-height: 2em;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 12px;
   }
 
-  @media (max-width: 1100px) {
-    width: 50%;
-  }
 
-  @media (max-width: 500px) {
-    width: 70%;
-  }
 `;
 
 const StorySection1Img = styled.div`
   img {
-    width: 70%;
-    height: 80%;
+    width: 60%;
+    height: auto;
   }
 `;
 
@@ -201,6 +140,7 @@ const StorySection1Img = styled.div`
 const StorySection2 = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content:center;
   text-align: center;
   align-items: center;
   margin-bottom: 100px;
@@ -219,7 +159,8 @@ const StorySection2 = styled.div`
 
 const StorySection2Img = styled.div`
   img {
-    width: 70%;
+    width: 60%;
+    height:auto;
   }
 `;
 
@@ -229,20 +170,25 @@ const StorySectionMiddle = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  align-items:center;
   width: 100%;
   margin-bottom: 100px;
 
   p {
-    width: 40%;
+    color:white;
+    width:50%;
+    font-size: 16px;
     line-height: 2em;
-    margin: 0 100px;
-    margin-bottom: 10px;
+    margin-top: 12px;
   }
 
   @media (max-width: 1100px) {
     p {
-      width: 70%;
+      width: 60%;
       margin: 10px;
+      line-height: 2em;
+    margin: 0 100px;
+    margin-bottom: 10px;
     }
   }
 
@@ -264,16 +210,18 @@ const StorySection3 = styled.div`
   width: 100%;
   justify-content: center;
   text-align: center;
+  align-items:center;
   margin-bottom: 100px;
   margin-top: 100px;
 `;
 
 const StorySection3Text = styled.div`
-  width: 40%;
+  width: 100%;
+  display: flex;
+  justify-content:center;
   text-align: center;
   align-items: center;
   height: auto;
-  margin-left: 0;
 
   img {
     margin-bottom: 100px;
@@ -284,18 +232,19 @@ const StorySection3Text = styled.div`
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.8em;
+    width:50%;
+    font-size: 16px;
+    line-height: 2em;
+    margin-top: 12px;
   }
 
   @media (max-width: 1100px) {
-    width: 70%;
+
   }
 
   @media (max-width: 500px) {
     p {
       margin-top: 50px;
-      width: 100%;
       font-size: 13px;
     }
   }
@@ -304,7 +253,8 @@ const StorySection3Text = styled.div`
 const StorySection3Img = styled.div`
   margin-bottom: 0px;
   img {
-    width: 60%;
+    width: 65%;
+    height:auto;
   }
 
   @media (max-width: 500px) {

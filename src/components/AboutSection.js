@@ -12,20 +12,20 @@ const AboutSection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h2 variants={titleAnim}>Hi,</motion.h2>
+            <motion.h2 className='titleText' variants={titleAnim}>Hi,</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2 className='titleText' variants={titleAnim}>
               I'm <span>Dean,</span> 
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <motion.h2 className='titleText' variants={titleAnim}>
             A <span>Web </span> Developer
             </motion.h2>
           </Hide>
         </motion.div>
-        <motion.p variants={fade}>
+        <motion.p  variants={fade}>
          Frontend Developer / Design Enthusiast
         </motion.p>
         <Link to='/contact'>
