@@ -26,7 +26,7 @@ const EmailForm = () => {
                     <input type="text"  name="subject" />
                     <label>Message</label>
                     <textarea className='message-box' name="message" />
-                    <input className='button-contact' type="submit"  value="Send" />
+                    <button className='button-contact' type="submit"  value="Send" />
                 </form>
         </FormWrapper>
     )
