@@ -113,7 +113,13 @@ const ServicesSection = () => {
 };
 
 const Description1 = styled.div`
-h2 {
+  flex: 1;
+  z-index:2;
+  width:100%;
+  padding-right: 2rem;
+  margin-bottom:2rem;
+
+  h2 {
     font-weight: lighter;
     font-size:75px;
   }
@@ -147,7 +153,52 @@ h2 {
 
     
   }
-`
+
+      @media (max-width: 1300px) {
+        padding:0;
+        
+        /* h2 {
+          font-weight: lighter;
+          font-size:40px;
+        } */
+
+        button {
+          margin: 2rem 0rem 0rem 0rem; 
+        }
+      }
+
+      @media (max-width: 835px) {
+        h2 {font-size: 50px;
+        }
+      }
+
+      @media (max-width: 800px) {
+          .portfolio-info {
+          p {
+            font-size:13px;
+        }
+          button {
+          align-items:center;
+          width: 100px;
+        }
+      }
+      }
+
+      @media (max-width: 450px) {
+      
+          .portfolio-info {
+          p {
+            font-size:10px;
+        }
+          button {
+          align-items:center;
+          width: 90px;
+        }
+      }
+      }
+
+  
+`;
 
 const Services = styled(About)`
   margin-bottom:15rem;
