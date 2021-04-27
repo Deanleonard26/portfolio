@@ -10,7 +10,7 @@ const Nav = () => {
     <StyledNav>
       <h1>
         <Link id="logo" to="/">
-          Dean Leonard
+          Dean L
         </Link>
       </h1>
       <ul>
@@ -71,7 +71,7 @@ const StyledNav = styled.nav`
     padding-right:2rem;
   }
   #logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
   }

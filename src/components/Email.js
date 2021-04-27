@@ -26,7 +26,7 @@ const EmailForm = () => {
                     <input type="text"  name="subject" />
                     <label>Message</label>
                     <textarea className='message-box' name="message" />
-                    <button className='button-contact' type="submit"  value="Send" />
+                    <button type="submit" value="Send">Send</button>
                 </form>
         </FormWrapper>
     )
@@ -65,11 +65,14 @@ const FormWrapper = styled.div`
             text-decoration:none;
             padding-left:10px;
         }
-        .button-contact {
+        button {
+            height:45px;
             border:0;
+            border-radius:10px;
             background-color: #23d997;
-            color:white;
-            font-size:20px;
+            color: white;
+            font-size:18px;
+            font-weight:400;
             cursor: pointer;
         }
 

@@ -1,7 +1,7 @@
 import React from "react";
 //Import Icons
 //Styles
-import { About, Description } from "../styles";
+import { About} from "../styles";
 import styled from "styled-components";
 import {scrollReveal} from '../animation'
 import useScroll from './useScroll';
@@ -24,7 +24,7 @@ const ServicesSection = () => {
       initial="hidden"
       ref={element}
     >
-      <Description>
+      <Description1>
         <h2>
           My <span>Portfolio</span> 
         </h2>
@@ -104,7 +104,7 @@ const ServicesSection = () => {
            
           </Card>
         </Cards>
-      </Description>
+      </Description1>
       {/* <Image>
         <img alt="camera" src={home2} />
       </Image> */}
@@ -112,8 +112,46 @@ const ServicesSection = () => {
   );
 };
 
+const Description1 = styled.div`
+h2 {
+    font-weight: lighter;
+    font-size:75px;
+  }
+
+  button {
+    outline:none;
+    width:150px;
+
+  }
+  
+  .portfolio-info {
+    p {
+      width: 60%;
+    }
+    
+    button {
+      height:50px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      margin: 2rem 0rem 5rem 0rem; 
+      text-decoration: none;
+      
+    }
+    align-items:center;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between
+
+    
+  }
+`
+
 const Services = styled(About)`
   margin-bottom:15rem;
+  width:100%;
 
   h2 {
     padding-bottom: 3rem;
