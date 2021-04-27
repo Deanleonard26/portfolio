@@ -12,6 +12,8 @@ import cafe1 from '../images/cafe1.png'
 import mailio1 from '../images/mailio1.png';
 import safe1 from '../images/safe1.png';
 import authors2 from '../images/authors2.png';
+import igniteMain from '../images/igniteMain.png'
+import weather1 from '../images/weather1.png';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -81,9 +83,26 @@ const ServicesSection = () => {
               </a>
               {/* <h3>Affordable</h3> */}
             </div>
-            {/* <p>Lorem ipsum dolor sit amet.</p> */}
+           
           </Card>
-        
+          <Card>
+            <div className="icon">
+            <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
+              <img alt="icon" src={weather1} />
+              </a>
+              {/* <h3>Affordable</h3> */}
+            </div>
+           
+          </Card>
+          <Card>
+            <div className="icon">
+            <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
+              <img alt="icon" src={igniteMain} />
+              </a>
+              {/* <h3>Affordable</h3> */}
+            </div>
+           
+          </Card>
         </Cards>
       </Description>
       {/* <Image>
@@ -112,7 +131,7 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: grid;
   width:100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:5px;
   
   @media (max-width: 1300px) {
@@ -144,8 +163,8 @@ const Card = styled.div`
     margin:0;
     padding:0;
     width:100%;
-    height:250px;
-    opacity:60%;
+    height:200px;
+    opacity:80%;
   }
 
   img:hover {

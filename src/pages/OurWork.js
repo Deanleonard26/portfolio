@@ -11,6 +11,8 @@ import cafe1 from '../images/cafe1.png'
 import mailio1 from '../images/mailio1.png';
 import safe1 from '../images/safe1.png';
 import authors2 from '../images/authors2.png';
+import igniteMain from '../images/igniteMain.png'
+import weather1 from '../images/weather1.png';
 
 const OurWork = () => {
     const [element, controls] = useScroll();
@@ -62,7 +64,6 @@ const OurWork = () => {
             <img src={mailio1} alt="mailio" />
           </a>
         </Movie>
-        <div className="span1"></div>
   
         <Movie
           ref={element}
@@ -82,6 +83,22 @@ const OurWork = () => {
             <img src={temp1} alt="temp" />
           </Link>
         </Movie>
+        <Movie
+          ref={element}
+          variants={fade}
+        >
+          <Link to="/work/temp-era">
+            <img src={weather1} alt="temp" />
+          </Link>
+        </Movie>
+        <Movie
+          ref={element}
+          variants={fade}
+        >
+          <Link to="/work/temp-era">
+            <img src={igniteMain} alt="temp" />
+          </Link>
+        </Movie>
 
         <ScrollTop />
       </Work>
@@ -89,39 +106,42 @@ const OurWork = () => {
   };
   
   const Work = styled(motion.div)`
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
+    display: grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:8px;
     margin-top: 30px;
+    padding: 0rem 8rem;
 
     @media (max-width: 1300px) {
       padding: 2rem 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
     }
-    h2 {
-      font-size:30px;
-      padding: 0rem;
-      color: white;
+    @media (max-width: 700px) {
+      padding: 2rem 2rem;
+      grid-template-columns: 1fr 1fr ;
+    }
+    @media (max-width: 450px) {
+      padding: 2rem 2rem;
+      grid-template-columns: 1fr ;
+      justify-content:center;
+      justify-content:center;
     }
 
   `;
 
   const Movie = styled(motion.div)`
-    display:flex;
-    margin: 10px;
+    margin: 2px;
     object-fit:cover;
+    object-position:center;
     overflow:hidden;
-      
-    .line {
-      height: 3rem;
-      background: #23d997;
-    }
-    
+    width: 100%;
+    height: 250px;
+
     img {
-      width: 400px;
-      height: 280px;
-      opacity: 70%;
+      width: 100%;
+      height: 100%;
+      opacity: 80%;
       object-fit:cover;
 
       &:hover {
@@ -132,14 +152,14 @@ const OurWork = () => {
       }
     }
 
-    @media (max-width: 500px) {
+    /* @media (max-width: 500px) {
       width:100%;
       
       img {
         object-fit:cover;
         width:320px;
       }
-    }
+    } */
   `;
 
 
