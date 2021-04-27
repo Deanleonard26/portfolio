@@ -6,16 +6,17 @@ const EmailForm = () => {
 
     const [email, setEmail] = useState(true);
 
-        function confirmEmail() {
-        setEmail(false)
+        const confirmEmail = () => {
+            setEmail(false);
+         
         }
 
         function goBack() {
             setEmail(true)
             }
 
-        function confirmTimeout() {
-            setTimeout(confirmEmail, 500)
+        function confirmTimeout(e) {
+            setTimeout(confirmEmail, 300)
         }
 
     function sendEmail(e) {
@@ -26,13 +27,15 @@ const EmailForm = () => {
           }, (error) => {
               console.log(error.text);
           });
+          e.preventDefault()
           e.target.reset()
     }
 
     return (
         <>
-       { email ? <FormWrapper>
-                <form className="contact-form" onSubmit={sendEmail}>
+       { email ? 
+       <FormWrapper >
+                <form className="contact-form" onSubmit={sendEmail} >
                     <label>Full Name</label>
                     <input type="text"  name="name" required/>
                     <label>Email</label>
@@ -41,7 +44,7 @@ const EmailForm = () => {
                     <input type="text"  name="subject" />
                     <label>Message</label>
                     <textarea className='message-box' name="message" required/>
-                    <button onClick={confirmTimeout} type="submit" value="Send">Send</button>
+                    <button onClick={confirmTimeout} type="submit" value="Send" required>Send</button>
                 </form>
         </FormWrapper>
         :

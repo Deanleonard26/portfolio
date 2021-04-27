@@ -6,7 +6,7 @@ import ScrollTop from '../components/ScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faFile} from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
-import cv from '../images/DeanLeonard.pdf';
+import cv from '../images/DeanLeonardFE.pdf';
 import EmailForm from '../components/Email';
 
 const ContactUs = () => {
