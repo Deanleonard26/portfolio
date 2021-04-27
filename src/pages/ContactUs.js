@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faFile} from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 import cv from '../images/DeanLeonard.pdf';
-import EmailForm from '../components/Email'
+import EmailForm from '../components/Email';
 
 const ContactUs = () => {
 
