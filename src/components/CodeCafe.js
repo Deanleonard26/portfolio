@@ -116,12 +116,12 @@ const StorySection1Text = styled.div`
 
 `;
 
-const StorySection1Img = styled.div`
-  img {
-    width: 60%;
-    height: auto;
-  }
-`;
+// const StorySection1Img = styled.div`
+//   img {
+//     width: 60%;
+//     height: auto;
+//   }
+// `;
 
 // SECTION 2
 
@@ -203,53 +203,53 @@ const StorySection3 = styled.div`
   margin-top: 100px;
 `;
 
-const StorySection3Text = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content:center;
-  text-align: center;
-  align-items: center;
-  height: auto;
+// const StorySection3Text = styled.div`
+//   width: 100%;
+//   display: flex;
+//   justify-content:center;
+//   text-align: center;
+//   align-items: center;
+//   height: auto;
 
-  img {
-    margin-bottom: 100px;
-  }
+//   img {
+//     margin-bottom: 100px;
+//   }
 
-  h2 {
-    font-size: 25px;
-  }
+//   h2 {
+//     font-size: 25px;
+//   }
 
-  p {
-    width:50%;
-    font-size: 16px;
-    line-height: 2em;
-    margin-top: 12px;
-  }
+//   p {
+//     width:50%;
+//     font-size: 16px;
+//     line-height: 2em;
+//     margin-top: 12px;
+//   }
 
-  @media (max-width: 1100px) {
+//   @media (max-width: 1100px) {
 
-  }
+//   }
 
-  @media (max-width: 500px) {
-    p {
-      margin-top: 50px;
-      font-size: 13px;
-    }
-  }
-`;
+//   @media (max-width: 500px) {
+//     p {
+//       margin-top: 50px;
+//       font-size: 13px;
+//     }
+//   }
+// `;
 
-const StorySection3Img = styled.div`
-  margin-bottom: 0px;
-  img {
-    width: 65%;
-    height:auto;
-  }
+// const StorySection3Img = styled.div`
+//   margin-bottom: 0px;
+//   img {
+//     width: 65%;
+//     height:auto;
+//   }
 
-  @media (max-width: 500px) {
-    img {
-      width: 90%;
-    }
-  }
-`;
+//   @media (max-width: 500px) {
+//     img {
+//       width: 90%;
+//     }
+//   }
+// `;
 
 export default CodeCafe;

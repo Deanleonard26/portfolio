@@ -6,7 +6,8 @@ import ScrollTop from '../components/ScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faFile} from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
-import cv from '../images/DeanLeonard.pdf'
+import cv from '../images/DeanLeonard.pdf';
+import EmailForm from '../components/Email'
 
 const ContactUs = () => {
 
@@ -60,9 +61,9 @@ const ContactUs = () => {
             </Social>
           </Hide>
           </ContactWrapper>
-        <MapWrapper>
-        <iframe title='map' className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38433.641312215295!2d-6.077855057978327!3d52.982556555769555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867b0b5d9502859%3A0x284e79fbf541a3e7!2sWicklow!5e0!3m2!1sen!2sie!4v1616688732715!5m2!1sen!2sie" ></iframe>
-        </MapWrapper>
+        <ContactFormWrapper>
+        <EmailForm />
+        </ContactFormWrapper>
       </ContactStyle>
     );
   };
@@ -86,7 +87,7 @@ const ContactUs = () => {
     margin-bottom: 1rem;
     color: black;
     @media (max-width: 1500px) {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
   `;
   const Hide = styled.div`
@@ -120,25 +121,27 @@ const ContactUs = () => {
   
   }
 
+  @media(max-width:1000px) {
+    justify-content:center;
+    width:100%;
+    align-items:center;
+  
+  }
+
   `
 
-  const MapWrapper = styled.div`
-
-      iframe {
-        width: 500px;
-        height: 500px;
-        border-radius:5px;
-        border:0;
-      }
+  const ContactFormWrapper = styled.div`
+    @media(max-width:1000px) {
+      display:flex;
+      justify-content:left;
+      text-align:left;
+      width: 100%;
+    }
 
     @media(max-width:500px) {
-    
-      iframe {
-        width: 320px;
-        height: 500px;
-        margin-bottom: 100px
-      }
-
+      display:flex;
+      justify-content:center;
+      text-align:left;
     }
   `
   
