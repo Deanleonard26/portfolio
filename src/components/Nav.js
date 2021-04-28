@@ -1,110 +1,150 @@
 import React from 'react'
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+// import {Link} from 'react-router-dom'
+// import { motion } from "framer-motion";
+// import { useLocation } from "react-router-dom";
+// import logo from '../images/3.png'
+
+const Menu = ({ open }) => {
+  return (
+    <StyledMenu open={open}>
+      <a href="/">
+        About 
+      </a>
+      <a href="/work">
+        Projects
+        </a>
+        <a href="/drone">
+        Drone
+        </a>
+      <a href="/contact">
+        Contact
+        </a>
+    </StyledMenu>
+  )
+}
+
+const Burger = ({ open, setOpen }) => {
+  return (
+
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
+
+  )
+}
 
 const Nav = () => {
-  const { pathname } = useLocation();
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
   return (
-    <StyledNav>
-      <h1>
-        <Link id="logo" to="/">
-          Dean L
-        </Link>
-      </h1>
-      <ul>
-        <li>
-          <Link to="/">About</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/work">Work</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-          />
-        </li>
-        {/* <li>
-          <Link to="/drone">Drone</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-          />
-        </li> */}
-      </ul>
-    </StyledNav>
-  );
-};
+    <BurgerWrapper>
+      <div ref={node}>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
+      </div>
+    </BurgerWrapper>
+  )  
+}
 
-const StyledNav = styled.nav`
-  min-height: 10vh;
+
+const StyledMenu = styled.nav`
   display: flex;
-  margin: auto;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 10rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    padding-right:2rem;
-  }
-  #logo {
-    font-size: 2rem;
-    font-family: "Lobster", cursive;
-    font-weight: lighter;
-  }
-  li {
-    padding-left: 10rem;
-    position: relative;
-  }
-  @media (max-width: 1300px) {
-    padding: 1rem;
-    #logo {
-      margin: 2rem;
-    }
-    ul {
-      padding: 2rem;
-      justify-content: space-around;
-      width: 50%;
-      li {
-        padding: 0;
-      }
-    }
-  }
-`;
-
-const Line = styled(motion.div)`
-  height: 0.3rem;
-  background: #23d997;
-  width: 0%;
+  width:100vw;
+  z-index:5;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
   position: absolute;
-  bottom: -80%;
-  left: 60%;
-  @media (max-width: 1300px) {
-    left: 0%;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  line-height: 5rem;
+
+  @media (max-width: 576px) {
+      width: 100%;
+    }
+
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: #0D0C1D;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    
   }
-`;
+`
+
+
+const BurgerWrapper = styled.div`
+  width:100%;
+  height: 100px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 100;
+`
+
+const StyledBurger = styled.button`
+  position: absolute;
+  top: 5%;
+  right:5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:hover {
+    background-color:transparent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 3rem;
+    height: 0.28rem;
+    background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
+  }
+`
 
 export default Nav;
