@@ -6,24 +6,23 @@ const EmailForm = () => {
 
     const [email, setEmail] = useState(true);
 
-        const confirmEmail = () => {
-            setEmail(false);
-         
-        }
+        // const confirmEmail = () => {
+        //     setTimeout(() => {
+        //         setEmail(false);
+        //     }, 1000)
+        // }
 
         function goBack() {
             setEmail(true)
             }
 
-        function confirmTimeout(e) {
-            setTimeout(confirmEmail, 300)
-        }
 
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('service_tjw1qpi', 'deanTemplate', e.target, 'user_GGEwyhcpFd92A2atWqlE1')
           .then((result) => {
               console.log(result.text);
+              setEmail(false);
           }, (error) => {
               console.log(error.text);
           });
@@ -44,7 +43,7 @@ const EmailForm = () => {
                     <input type="text"  name="subject" />
                     <label>Message</label>
                     <textarea className='message-box' name="message" required/>
-                    <button onClick={confirmTimeout} type="submit" value="Send" required>Send</button>
+                    <button type="submit" value="Send">Send</button>
                 </form>
         </FormWrapper>
         :
