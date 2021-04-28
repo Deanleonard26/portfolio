@@ -120,6 +120,21 @@ const FormWrapper = styled.div`
             width: 100%;
         }
     }
+
+    @media(min-width:1700px) {
+        margin-left:200px;
+
+        input {
+            height:50px;
+        }
+        .message-box {
+            width: 100%;
+            height: 150px;
+        }
+        .button-contact {
+            width: 100%;
+        }
+    }
 `
 
 const EmailConfirmation = styled.div`
