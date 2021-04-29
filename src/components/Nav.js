@@ -1,25 +1,26 @@
 import React from 'react'
 import styled from 'styled-components';
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 // import { motion } from "framer-motion";
 // import { useLocation } from "react-router-dom";
 // import logo from '../images/3.png'
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen })  => {
+
   return (
     <StyledMenu open={open}>
-      <a href="/">
+       <Link to='/' open={open} onClick={() => setOpen(!open)}>
         About 
-      </a>
-      <a href="/work">
+       </Link>
+      <Link to='/work' open={open} onClick={() => setOpen(!open)}>
         Projects
-        </a>
-        <a href="/drone">
+        </Link>
+        <Link to='/drone' open={open} onClick={() => setOpen(!open)}>
         Drone
-        </a>
-      <a href="/contact">
+        </Link>
+        <Link to='/contact' open={open} onClick={() => setOpen(!open)}>
         Contact
-        </a>
+        </Link>
     </StyledMenu>
   )
 }
@@ -57,7 +58,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: white;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
   height: 100vh;
   text-align: center;
   padding: 2rem;
@@ -66,6 +67,7 @@ const StyledMenu = styled.nav`
   right: 0;
   transition: transform 0.3s ease-in-out;
   line-height: 5rem;
+  overflow-x:hidden;
 
   @media (max-width: 576px) {
       width: 100%;
@@ -80,6 +82,7 @@ const StyledMenu = styled.nav`
     color: #0D0C1D;
     text-decoration: none;
     transition: color 0.3s linear;
+    overflow-x:hidden;
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
@@ -89,7 +92,6 @@ const StyledMenu = styled.nav`
     
   }
 `
-
 
 const BurgerWrapper = styled.div`
   width:100%;
@@ -101,13 +103,13 @@ const BurgerWrapper = styled.div`
 `
 
 const StyledBurger = styled.button`
-  position: absolute;
+  position:fixed;
   top: 5%;
   right:5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
+  width: 3rem;
   height: 3rem;
   background: transparent;
   border: none;
@@ -131,6 +133,7 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    
 
     :first-child {
       transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
