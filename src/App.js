@@ -10,6 +10,7 @@ import {Switch, Route, useLocation} from 'react-router-dom';
 import {AnimatePresence} from 'framer-motion'
 import TempEra from './components/TempEra';
 import CodeCafe from './components/CodeCafe';
+import Banner from './components/Banner'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
+      <Banner />
       <AnimatePresence exitBeforeEnter>
      <Switch location={location} key={location.pathname}>
 

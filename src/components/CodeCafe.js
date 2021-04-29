@@ -4,13 +4,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import cafe1 from "../images/cafe1.png";
 import cafe2 from "../images/cafe2.png";
-
+import cafe3 from "../images/codeCafe6.png";
+import cafe4 from "../images/codeCafe7.png";
+import cafe5 from "../images/codeCafe8.png";
 
 const CodeCafe = () => {
   
     useEffect(() => {
     Aos.init({ duration: 2000 });
-  }, []);
+    }, []);
 
   return (
     <StoryWrapper>
@@ -24,30 +26,41 @@ const CodeCafe = () => {
           <p>
             Code Cafe was our first group project in Wild Code school that lasted 2 weeks. During this time we created a code cafe website using HTML & CSS    
           </p>
+          <a href='https://codingcafe.netlify.app/' target='blank'>
+          <button>Website</button>
+          </a>
         </StorySection1Text>
-        
-      </StorySection1>
-      <StorySection2>
-        <StorySection2Img>
+        <StorySection1Img>
           <img
             data-aos="fade-up"
             data-aos-duration="2000"
             src={cafe2}
             alt="temp"
           />
-        </StorySection2Img>
+        </StorySection1Img>
+      </StorySection1>
+      <StorySection2>
       </StorySection2>
       <StorySectionMiddle data-aos="fade-up" data-aos-duration="3500">
         <p>
-         My main responsibility for this project was wireframing, design and creating the landing page and about us section.
+         My main responsibility for this project was wireframing, design and creating the landing page and about us section. 
+         This was a great introductary project and I learned a lot about layout and responsiveness of a webpage. 
+         When researching how we wanted the design of the page to look, we explored different color themes and finally settled on 
+         the color that is currently on the page. We wanted to introduce a modern yet quirky look to the page.
         </p>
-      </StorySectionMiddle>
-      
-      
-     
-      <StorySection3>
-        
+      </StorySectionMiddle> 
+      <StorySection3 data-aos="fade-up" data-aos-duration="3500">
+        <img src={cafe3} alt='code cafe' />
+        <img src={cafe5} alt='code cafe' />
       </StorySection3>
+      <StorySectionMiddle data-aos="fade-up" data-aos-duration="3500">
+        <p>
+         The main challenge during this project was trying to avoid conflict when working in a team of four. We experienced conflict in our shared files along with pushing and pulling from our teams github repo
+        </p>
+      </StorySectionMiddle> 
+       <StorySection4 data-aos="fade-up" data-aos-duration="3500">
+        <img src={cafe3} alt='code cafe' />
+      </StorySection4>
     </StoryWrapper>
   );
 };
@@ -55,11 +68,10 @@ const CodeCafe = () => {
 // SECTION 1
 
 const Banner = styled.div`
-margin-bottom: 100px;
+margin: 50px 0 100px 0 ;
 
   img {
-    width:60vw;
-    min-width: 60%;
+    width:80vw;
     height: auto;
   }
 
@@ -73,31 +85,37 @@ const StoryWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items:center;
   margin: 0;
   padding: 0;
 `;
 
 const StorySection1 = styled.div`
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   text-align:center;
-  align-items:center;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin: 50px 0;
 `;
+
+const StorySection1Img = styled.div`
+  width: 60%;
+
+  img {
+    width: 100%;
+    margin:0;
+    padding:0;
+    height: auto;
+  }
+`
 
 const StorySection1Text = styled.div`
   display: flex;
-  width: 100%;
-  justify-content: center;
   flex-direction: column;
-  text-align:center;
-  align-items:center;
-  margin: 20px;
-  height: auto;
-  text-align: left;
+  text-align:left;
+  width: 40%;
 
   h2 {
     font-size: 30px;
@@ -106,22 +124,17 @@ const StorySection1Text = styled.div`
   }
 
   p {
-    width:50%;
-    text-align:center;
+    width: 80%;
     font-size: 16px;
     line-height: 2em;
     margin-top: 12px;
   }
-
-
+  button {
+    width: 40%;
+    text-decoration:none;
+    outline:none;
+  }
 `;
-
-// const StorySection1Img = styled.div`
-//   img {
-//     width: 60%;
-//     height: auto;
-//   }
-// `;
 
 // SECTION 2
 
@@ -200,56 +213,25 @@ const StorySection3 = styled.div`
   text-align: center;
   align-items:center;
   margin-bottom: 100px;
-  margin-top: 100px;
+  margin-top: 50px;
+
+  img {
+    width: 550px;
+    margin: 0 10px;
+    height: 350px;
+    object-fit: cover;
+  }
 `;
 
-// const StorySection3Text = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content:center;
-//   text-align: center;
-//   align-items: center;
-//   height: auto;
+const StorySection4 = styled.div`
+margin-top: 100px; 
 
-//   img {
-//     margin-bottom: 100px;
-//   }
-
-//   h2 {
-//     font-size: 25px;
-//   }
-
-//   p {
-//     width:50%;
-//     font-size: 16px;
-//     line-height: 2em;
-//     margin-top: 12px;
-//   }
-
-//   @media (max-width: 1100px) {
-
-//   }
-
-//   @media (max-width: 500px) {
-//     p {
-//       margin-top: 50px;
-//       font-size: 13px;
-//     }
-//   }
-// `;
-
-// const StorySection3Img = styled.div`
-//   margin-bottom: 0px;
-//   img {
-//     width: 65%;
-//     height:auto;
-//   }
-
-//   @media (max-width: 500px) {
-//     img {
-//       width: 90%;
-//     }
-//   }
-// `;
+img {
+    width: 70%;
+    margin: 0 10px;
+    height:auto;
+    object-fit: cover;
+    margin-bottom:200px;
+  }`
 
 export default CodeCafe;

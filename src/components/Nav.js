@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 // import { motion } from "framer-motion";
 // import { useLocation } from "react-router-dom";
 // import logo from '../images/3.png'
@@ -41,14 +41,45 @@ const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   return (
+    <NavWrapper>
+    <LogoWrapper>
+    <Link to='/'  style={{ textDecoration: "none", color: "inherit" }} >
+    <h5>Dean L</h5>
+    </Link>
+    </LogoWrapper>
     <BurgerWrapper>
       <div ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
       </div>
     </BurgerWrapper>
+    </NavWrapper>
   )  
 }
+
+const NavWrapper = styled.div`
+  display:flex;
+  flex-flow: row nowrap;
+  width: 100%;
+
+  h5 {
+   width: 100%;
+   font-weight: 20;
+   font-size: 25px;
+   color:white;
+   cursor: pointer;
+ }
+`
+
+const LogoWrapper = styled.div`
+  width: 100%;
+  margin-top:45px;
+  margin-left:5%;
+
+  @media(max-width:500px) {
+    margin-left:10%;
+  }
+`
 
 
 const StyledMenu = styled.nav`

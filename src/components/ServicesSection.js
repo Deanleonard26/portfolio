@@ -118,6 +118,7 @@ const Description1 = styled.div`
   width:100%;
   padding-right: 2rem;
   margin-bottom:2rem;
+  margin-top:3rem;
 
   h2 {
     font-weight: lighter;
