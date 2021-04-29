@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import cafe1 from "../images/cafe1.png";
 import cafe2 from "../images/cafe2.png";
 import cafe3 from "../images/codeCafe6.png";
-import cafe4 from "../images/codeCafe7.png";
+// import cafe4 from "../images/codeCafe7.png";
 import cafe5 from "../images/codeCafe8.png";
 
 const CodeCafe = () => {
@@ -158,12 +158,12 @@ const StorySection2 = styled.div`
   }
 `;
 
-const StorySection2Img = styled.div`
-  img {
-    width: 60%;
-    height:auto;
-  }
-`;
+// const StorySection2Img = styled.div`
+//   img {
+//     width: 60%;
+//     height:auto;
+//   }
+// `;
 
 // MIDDLE STORY SECTION
 

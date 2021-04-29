@@ -153,12 +153,7 @@ const StorySection2 = styled.div`
   }
 `;
 
-const StorySection2Img = styled.div`
-  img {
-    width: 60%;
-    height:auto;
-  }
-`;
+
 
 // MIDDLE STORY SECTION
 
