@@ -4,11 +4,13 @@ import { About, Description, Hide } from "../styles";
 import {motion} from 'framer-motion'
 import {titleAnim, fade} from '../animation'
 import Wave from './Wave';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Banner from '../components/Banner'
 
 const AboutSection = () => {
   return (
     <About>
+    <Banner />
       <Description>
         <motion.div>
           <Hide>

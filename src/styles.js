@@ -8,6 +8,7 @@ export const About = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
+  overflow-x:hidden;
 
   @media (max-width: 1300px) {
        padding: 1rem 3rem;
