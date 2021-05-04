@@ -9,6 +9,7 @@ import {scrollReveal} from '../animation'
 const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
+    <Wrapper>
     <Faq
       variants={scrollReveal}
       ref={element}
@@ -77,20 +78,25 @@ const FaqSection = () => {
         </Toggle>
       </AnimateSharedLayout>
     </Faq>
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.div`
+z-index: 50;
+`
+
 const Faq = styled(About)`
   display: block;
-  z-index:10;
+  z-index: 50;
 
   span {
-    z-index:10;
+    z-index: 50;
   }
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
-    z-index:10;
+    z-index: 50;
   }
   .faq-line {
     background: #cccccc;

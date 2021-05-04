@@ -15,7 +15,9 @@ const ContactUs = () => {
   const FavStyle = {
     color: '#23d997',
     fontSize: '70px',
-    margin: '2rem'
+    margin: '2rem',
+    marginLeft:'0',
+    marginRight:'4rem'
   }
 
     return (
@@ -44,23 +46,21 @@ const ContactUs = () => {
           <Hide>
             <Social variants={titleAnim}>
             <a href = "mailto: deanleonard26@gmail.com" target='blank'>
-            <FontAwesomeIcon style={FavStyle} icon={faAt} />
+            <FontAwesomeIcon className='icon' style={FavStyle} icon={faAt} />
             </a>
             <a href={cv} title="download">
-            <FontAwesomeIcon style={FavStyle} icon={faFile} />
+            <FontAwesomeIcon className='icon'  style={FavStyle} icon={faFile} />
             </a>
             </Social>
           </Hide>
           <Hide>
             <Social variants={titleAnim}>
             <a href="https://linkedin.com/in/deanleonard1" target='blank'>
-            <FontAwesomeIcon style={FavStyle} icon={faLinkedin} />
+            <FontAwesomeIcon className='icon'  style={FavStyle} icon={faLinkedin} />
             </a>
             <a href="http://github.com/Deanleonard26" target='blank'>
-            <FontAwesomeIcon style={FavStyle} icon={faGithub} />
+            <FontAwesomeIcon className='icon'  style={FavStyle} icon={faGithub} />
             </a>
-
-             
             </Social>
           </Hide>
           </ContactWrapper>
@@ -87,6 +87,11 @@ const ContactUs = () => {
       font-size: 1rem;
       color:white;
     }
+
+    @media (max-width: 500px) {
+      margin:1rem 2rem;
+      padding: 2rem 2rem 0rem 2rem;
+    }
   `;
   
   const Title = styled.div`
@@ -104,6 +109,7 @@ const ContactUs = () => {
  const Social = styled(motion.div)`
     display: flex;
     align-items: center;
+
     h2 {
       margin: 2rem;
     }
@@ -113,6 +119,8 @@ const ContactUs = () => {
     }
 
     @media(max-width:500px) {
+    align-items:left;
+
     p{
       width: 100%;
     }
@@ -121,6 +129,7 @@ const ContactUs = () => {
 
   const ContactWrapper = styled.div `
   width:500px;
+
   
   @media(max-width:1200px) {
     margin-bottom: 80px;

@@ -3,9 +3,11 @@ body{
     z-index: 0 ;
     background: black;
     overflow-x: hidden;
+    position: relative;
   }
 
 .circleWrapper {
+  z-index: 0 ;
     overflow-x: hidden;
     position: absolute;
 }

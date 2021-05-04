@@ -9,7 +9,6 @@ export const About = styled(motion.div)`
   padding: 5rem 10rem;
   color: white;
   overflow-x:hidden;
-  z-index:10;
 
   @media (max-width: 1300px) {
        padding: 1rem 3rem;
@@ -21,6 +20,7 @@ export const Description = styled.div`
   z-index:2;
   padding-right: 5rem;
   margin-bottom:2rem;
+  
   h2 {
     font-weight: lighter;
     font-size:75px;
