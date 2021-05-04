@@ -10,16 +10,16 @@ const Menu = ({ open, setOpen })  => {
   return (
     <StyledMenu open={open}>
        <Link to='/' open={open} onClick={() => setOpen(!open)}>
-        About 
+       <span className='nav-span'>About</span>  
        </Link>
       <Link to='/work' open={open} onClick={() => setOpen(!open)}>
-        Projects
+      <span className='nav-span'>Projects</span> 
         </Link>
         <Link to='/drone' open={open} onClick={() => setOpen(!open)}>
-        Drone
+        <span className='nav-span'>Drone</span> 
         </Link>
         <Link to='/contact' open={open} onClick={() => setOpen(!open)}>
-        Contact
+        <span className='nav-span'>Contact</span> 
         </Link>
     </StyledMenu>
   )
@@ -75,6 +75,7 @@ const LogoWrapper = styled.div`
   width: 100%;
   margin-top:45px;
   margin-left:5%;
+  
 
   @media(max-width:500px) {
     margin-left:10%;
@@ -84,20 +85,20 @@ const LogoWrapper = styled.div`
 
 const StyledMenu = styled.nav`
   display: flex;
-  width:100vw;
+  width:100%;
   z-index:5;
   flex-direction: column;
   justify-content: center;
   background: white;
   transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
-  height: 100vh;
+  height: 100%;
   text-align: center;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  line-height: 5rem;
+  line-height: 7rem;
   overflow-x:hidden;
 
   @media (max-width: 576px) {
@@ -105,7 +106,8 @@ const StyledMenu = styled.nav`
     }
 
   a {
-    font-size: 2rem;
+    width:100%;
+    font-size: 3.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
@@ -116,12 +118,52 @@ const StyledMenu = styled.nav`
     overflow-x:hidden;
 
     @media (max-width: 576px) {
-      font-size: 1.5rem;
+      font-size: 2rem;
       text-align: center;
     }
 
     
   }
+
+  .nav-span {
+    color: black;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .nav-span:before, .nav-span:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 50%;
+  margin-top: -3px;
+  background: black;
+}
+
+.nav-span:before {
+  left: -2.5px;
+}
+.nav-span:after {
+  right: 2.5px;
+  background: black;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-span:hover:before {
+  background: black;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+
 `
 
 const BurgerWrapper = styled.div`

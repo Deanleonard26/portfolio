@@ -6,12 +6,13 @@ import {motion} from 'framer-motion';
 import {pageAnimation} from '../animation'
 import ScrollTop from '../components/ScrollTop'
 import styled from 'styled-components';
+import Nav from '../components/Nav'
 
 const AboutUs = () => {
     return (
         <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
-           <Wrapper>
-                
+           <Wrapper>   
+             <Nav />
                 <AboutSection />
                 <ServicesSection />
                 <FAQSection />

@@ -3,7 +3,7 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div>
+        <div className="circleWrapper">
             <div className='ripple-background'>
                 <div className='circle xxlarge shade1'></div>
                 <div className='circle xlarge shade2'></div>

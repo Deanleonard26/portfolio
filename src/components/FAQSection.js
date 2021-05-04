@@ -82,12 +82,15 @@ const FaqSection = () => {
 
 const Faq = styled(About)`
   display: block;
+  z-index:10;
+
   span {
-    
+    z-index:10;
   }
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
+    z-index:10;
   }
   .faq-line {
     background: #cccccc;

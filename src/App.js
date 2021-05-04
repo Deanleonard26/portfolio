@@ -1,6 +1,5 @@
 import AboutUs from './pages/AboutUs';
 import GlobalStyle from './components/GlobalStyle';
-import Nav from './components/Nav';
 import ContactUs from './pages/ContactUs';
 import OurWork from './pages/OurWork';
 import Drone from './pages/Drone'
@@ -19,8 +18,6 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Nav />
-
       <AnimatePresence exitBeforeEnter>
      <Switch location={location} key={location.pathname}>
 

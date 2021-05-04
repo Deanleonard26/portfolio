@@ -8,6 +8,7 @@ import { faAt, faFile} from '@fortawesome/free-solid-svg-icons';
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 import cv from '../images/DeanLeonardFE.pdf';
 import EmailForm from '../components/Email';
+import Nav from '../components/Nav'
 
 const ContactUs = () => {
 
@@ -18,6 +19,8 @@ const ContactUs = () => {
   }
 
     return (
+      <Wrapper>
+      <Nav />
       <ContactStyle
         exit="exit"
         variants={pageAnimation}
@@ -65,8 +68,11 @@ const ContactUs = () => {
         <EmailForm />
         </ContactFormWrapper>
       </ContactStyle>
+      </Wrapper>
     );
   };
+
+  const Wrapper = styled.div``
 
   const ContactStyle = styled(motion.div)`
     padding: 5rem 5rem;

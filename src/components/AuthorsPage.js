@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
-import {titleAnim, pageAnimation, fade} from '../animation'
+import {titleAnim} from '../animation'
+import { Hide } from "../styles";
 import cafe1 from "../images/cafe1.png";
 
-const CodeCafe = () => {
+const AuthorsPage = () => {
 
   return (
-    <StoryWrapper variants={fade}>
-      <ImgWrapper >
-        <img src={cafe1} alt='code cafe' /> 
+    <StoryWrapper>
+      <ImgWrapper>
+        <img src={cafe1} alt='temp era' /> 
       </ImgWrapper>
       <StorySection>
       <CloseButton>
@@ -18,7 +19,7 @@ const CodeCafe = () => {
               <h1>X</h1>
             </Link>
       </CloseButton>
-         <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
+         <motion.div>
           <Hide>
         <motion.h2 className='titleText' variants={titleAnim}>Code Cafe</motion.h2>
           </Hide>
@@ -44,14 +45,14 @@ const CodeCafe = () => {
         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</motion.p>
         </Hide>
         <Hide>
-        <motion.p className='titleText' variants={titleAnim}>Lorem Ipsum is sr took a galley of type and scrambled it to make a type specimen book. 
+        <motion.p>Lorem Ipsum is sr took a galley of type and scrambled it to make a type specimen book. 
         It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
         essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
          versions of Lorem Ipsum.</motion.p>
         </Hide>
         <Hide>
-        <motion.button><a href='https://codingcafe.netlify.app/' target='blank'>View Website </a></motion.button>
+        <motion.button>View Website</motion.button>
         </Hide>
       </motion.div>
       </StorySection>
@@ -67,15 +68,12 @@ const StoryWrapper = styled(motion.div)`
   width:100vw;
   height: 100vh;
   background-color:white;
+  position:fixed;
+  overflow:hidden;
+  z-index:25;
 
   button {
-      margin-top:30px;
-      color:black;
-  }
-
-  a {
-      text-decoration:none;
-      outline:none;
+      
       color:black;
   }
 `
@@ -101,19 +99,18 @@ const StorySection = styled(motion.div)`
 
   h4 {
     padding: 0.5rem 0rem;
-    margin-top:15px;
   }
 
   p {
-    width: 90%;
-    margin-top:15px;
+    margin-top:20px;
     padding: 0.5rem 0rem;
     color: black;
   }
 
   hr {
-    width: 5%;
+    width: 10%;
     height: 5px;
+    margin:0px 0 20px 2px;
     background-color:green;
   }
 `
@@ -133,8 +130,4 @@ h1 {
 }
 `
 
-const Hide = styled(motion.div)`
-  overflow: hidden;
-`;
-
-export default CodeCafe;
+export default AuthorsPage;

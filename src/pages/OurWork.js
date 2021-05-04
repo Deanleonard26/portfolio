@@ -13,11 +13,15 @@ import safe1 from '../images/safe1.png';
 import authors2 from '../images/authors2.png';
 import igniteMain from '../images/igniteMain.png'
 import weather1 from '../images/weather1.png';
+import Nav from '../components/Nav'
 
 const OurWork = () => {
     const [element, controls] = useScroll();
     // const [element2, controls2] = useScroll();
     return (
+      <Wrapper>
+        <Nav />
+
       <Work
         // style={{ background: "#fff" }}
         exit="exit"
@@ -32,13 +36,15 @@ const OurWork = () => {
           <Frame4 variants={slider}></Frame4>
         </motion.div> */}
         <Movie>
-          <motion.h2  ref={element} animate={fade}></motion.h2>
+          <motion.h2  ref={controls}
+          variants={fade}></motion.h2>
           <a href='https://brave-spence-b5da41.netlify.app/' target="blank">
               <img src={music1} alt="music" />
               </a>
         </Movie>
   
-        <Movie ref={element} variants={controls}  animate={fade} >
+        <Movie ref={element}
+          variants={fade} >
           {/* <motion.div variants={lineAnim} className="line"></motion.div> */}
           <a href=' https://the-authors.netlify.app/' target='blank'>
             <img src={authors2} alt="authors" />
@@ -98,12 +104,16 @@ const OurWork = () => {
           <Link to="/work/temp-era">
             <img src={igniteMain} alt="temp" />
           </Link>
+          
         </Movie>
 
         <ScrollTop />
       </Work>
+      </Wrapper>
     );
   };
+
+  const Wrapper = styled.nav``
   
   const Work = styled(motion.div)`
     display: grid;
@@ -123,7 +133,7 @@ const OurWork = () => {
     }
     @media (max-width: 450px) {
       padding: 2rem 2rem;
-      grid-template-columns: 1fr ;
+  
       justify-content:center;
       justify-content:center;
     }
@@ -131,12 +141,13 @@ const OurWork = () => {
   `;
 
   const Movie = styled(motion.div)`
-    margin: 2px;
+    margin: 3px;
     object-fit:cover;
     object-position:center;
     overflow:hidden;
     width: 100%;
     height: 250px;
+    border-radius:20px;
 
     img {
       width: 100%;
@@ -152,14 +163,11 @@ const OurWork = () => {
       }
     }
 
-    /* @media (max-width: 500px) {
+    @media (max-width: 500px) {
       width:100%;
-      
-      img {
-        object-fit:cover;
-        width:320px;
-      }
-    } */
+      height: 150px;
+     
+    }
   `;
 
 

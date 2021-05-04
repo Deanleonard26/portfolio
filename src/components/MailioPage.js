@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
-import {titleAnim, pageAnimation, fade} from '../animation'
+import {titleAnim} from '../animation'
 import cafe1 from "../images/cafe1.png";
 
-const CodeCafe = () => {
+const MailioPage = () => {
 
   return (
-    <StoryWrapper variants={fade}>
-      <ImgWrapper >
-        <img src={cafe1} alt='code cafe' /> 
+    <StoryWrapper>
+      <ImgWrapper>
+        <img src={cafe1} alt='temp era' /> 
       </ImgWrapper>
       <StorySection>
       <CloseButton>
@@ -18,7 +18,7 @@ const CodeCafe = () => {
               <h1>X</h1>
             </Link>
       </CloseButton>
-         <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
+         <motion.div>
           <Hide>
         <motion.h2 className='titleText' variants={titleAnim}>Code Cafe</motion.h2>
           </Hide>
@@ -44,7 +44,7 @@ const CodeCafe = () => {
         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</motion.p>
         </Hide>
         <Hide>
-        <motion.p className='titleText' variants={titleAnim}>Lorem Ipsum is sr took a galley of type and scrambled it to make a type specimen book. 
+        <motion.p>Lorem Ipsum is sr took a galley of type and scrambled it to make a type specimen book. 
         It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
         essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
@@ -67,6 +67,9 @@ const StoryWrapper = styled(motion.div)`
   width:100vw;
   height: 100vh;
   background-color:white;
+  position:fixed;
+  overflow:hidden;
+  z-index:25;
 
   button {
       margin-top:30px;
@@ -133,8 +136,8 @@ h1 {
 }
 `
 
-const Hide = styled(motion.div)`
+const Hide = styled.div`
   overflow: hidden;
 `;
 
-export default CodeCafe;
+export default MailioPage;
