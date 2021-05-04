@@ -3,7 +3,6 @@ body{
     z-index: 0 ;
     background: black;
     overflow-x: hidden;
-    position: relative;
   }
 
 .circleWrapper {
@@ -40,6 +39,7 @@ body{
   }
   
   .large{
+    z-index: 0 ;
     width: 600px;
     height: 600px;
     right: -300px;

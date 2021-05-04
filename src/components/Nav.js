@@ -15,9 +15,9 @@ const Menu = ({ open, setOpen })  => {
       <Link to='/work' open={open} onClick={() => setOpen(!open)}>
       <span className='nav-span'>Projects</span> 
         </Link>
-        <Link to='/drone' open={open} onClick={() => setOpen(!open)}>
+        <a href='https://www.instagram.com/deanldrone_/'>
         <span className='nav-span'>Drone</span> 
-        </Link>
+        </a>
         <Link to='/contact' open={open} onClick={() => setOpen(!open)}>
         <span className='nav-span'>Contact</span> 
         </Link>

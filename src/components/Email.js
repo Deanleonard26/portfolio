@@ -108,7 +108,22 @@ const FormWrapper = styled.div`
 
         @media(max-width:500px) {
         form {
-            width: 300px;
+            width: 320px;
+        }
+        input {
+            width: 100%;
+        }
+        .message-box {
+            width: 100%;
+        }
+        .button-contact {
+            width: 100%;
+        }
+    }
+
+    @media(min-width:400px) and (max-width:500px) {
+        form {
+            width: 370px;
         }
         input {
             width: 100%;

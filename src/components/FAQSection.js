@@ -19,7 +19,7 @@ const FaqSection = () => {
       <h2>
         About <span>Me</span>
       </h2>
-      <AnimateSharedLayout>
+      <AnimateSharedLayout >
         <Toggle title="My Background">
           <div className="answer">
             <p>My Background is a little different compared to a typical Web Developer.</p>

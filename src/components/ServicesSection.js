@@ -34,12 +34,13 @@ const ServicesSection = () => {
         <button> See More</button>
         </Link>
         </div>
-        <Cards>
+        <Link to="/work"  style={{ textDecoration: "none" }}>
+        <Cards >
           <Card>
             <div className="icon">
-            <a href=' https://the-authors.netlify.app/' target='blank'>
+         
               <img alt="music app" src={authors2} />
-              </a>
+             
               {/* <h3>Efficient</h3> */}
             </div>
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
@@ -60,50 +61,41 @@ const ServicesSection = () => {
           </Card>
           <Card>
             <div className="icon">
-            <a href=' https://vigilant-sammet-febf50.netlify.app/' target='blank'>
               <img alt="icon" src={mailio1} />
-              </a>
               {/* <h3>Affordable</h3> */}
             </div>
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
             <div className="icon">
-            <a href='https://brave-spence-b5da41.netlify.app/' target="blank">
               <img alt="icon" src={music1} />
-              </a>
               {/* <h3>Affordable</h3> */}
             </div>
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
             <div className="icon">
-            <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
               <img alt="icon" src={safe1} />
-              </a>
               {/* <h3>Affordable</h3> */}
             </div>
            
           </Card>
           <Card>
             <div className="icon">
-            <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
               <img alt="icon" src={weather1} />
-              </a>
               {/* <h3>Affordable</h3> */}
             </div>
            
           </Card>
           <Card>
             <div className="icon">
-            <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
               <img alt="icon" src={igniteMain} />
-              </a>
               {/* <h3>Affordable</h3> */}
             </div>
            
           </Card>
         </Cards>
+        </Link>
       </Description1>
       {/* <Image>
         <img alt="camera" src={home2} />
