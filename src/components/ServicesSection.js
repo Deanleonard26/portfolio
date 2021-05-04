@@ -116,7 +116,6 @@ const Description1 = styled.div`
   flex: 1;
   z-index:2;
   width:100%;
-  padding-right: 2rem;
   margin-bottom:2rem;
   margin-top:3rem;
 
