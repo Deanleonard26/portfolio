@@ -3,16 +3,18 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {titleAnim, pageAnimation} from '../animation'
-import music1 from "../images/music1.png";
+import ignite1 from "../images/ignite1.png";
+import ignite2 from "../images/ignite2.png";
 
-const MusicPlayer = () => {
+const GamesPage = () => {
 
   return (
     <StoryWrapper variants={pageAnimation}
     initial="hidden"
     animate="show">
       <ImgWrapper >
-        <img src={music1} alt='music player' /> 
+        <img src={ignite1} alt='code cafe' /> 
+        <img src={ignite2} alt='code cafe' /> 
       </ImgWrapper>
       <StorySection>
       <CloseButton>
@@ -22,40 +24,37 @@ const MusicPlayer = () => {
       </CloseButton>
          <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
           <Hide>
-        <motion.h2 className='titleText' variants={titleAnim}>Music Player</motion.h2>
+        <motion.h2 className='titleText' variants={titleAnim}>Games Application</motion.h2>
           </Hide>
           <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
-        <motion.h4 className='titleText' variants={titleAnim}>Simo Edwin React Course Project</motion.h4>
+        <motion.h4 className='titleText' variants={titleAnim}>Simo Edwin React Course Project 3</motion.h4>
         </Hide>
         <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
-        <motion.p className='titleText' variants={titleAnim}>React/Scss</motion.p>
+        <motion.p className='titleText' variants={titleAnim}>React/Redux/Games API/Styled Components/Framer Motion</motion.p>
         </Hide>
         <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
         <motion.p className='titleText' variants={titleAnim}>
-          After completing the 5 month bootcamp in Wild Code School I jumped into the "Dev Ed React Course" to furhter improve my skills in react. 
-          The first project that I worked on was the Waves music player. This was a very challenging project as it explored a number of new areas of react. 
-          Creating an application like this was so much fun as it showed me the complexity of a music player.
+          For the final project in the Dev Ed react course I created a games application using a games API. for this project I explored the area of redux. As I have recently taken up react I focussed on context, but I wanted to learn more about redux as it is still used in many companies.
         </motion.p>
         </Hide>
         <Hide>
         <motion.p className='titleText' variants={titleAnim}>
-          Some of the challenges that you encounter on this project is prop drilling and passing props through the app. I really enjoyed using scss and creating smooth animations throughout the application. 
-          Following on from the course I continued to work on the app and make it my own. I altered the layout to suit my vision, and added new icons and animations to the burger bar and creating a rotate animation when the music is playing.
+           Some of the main challenges when creating this application was responsiveness of the game cards, along with animations with framer motion. The main challenge that I faced was getting to grips with Redux. Being used to context in React, the introduction of redux was very challenging but it was great to use it in this project.
         </motion.p>
         </Hide>
         <Hide>
         <motion.button 
           className='titleText' variants={titleAnim}
-          ><a href='https://youthful-montalcini-abf25f.netlify.app/' target='blank'>View Music Application </a></motion.button>
+          ><a href='https://priceless-lewin-9973e5.netlify.app/' target='blank'>View Website </a></motion.button>
         </Hide>
       </motion.div>
       </StorySection>
@@ -87,7 +86,7 @@ const StoryWrapper = styled(motion.div)`
 
   @media (max-width: 1000px){
     width:100%;
-    height:auto;
+    min-height:100vh;
     overflow:scroll;
   }
 
@@ -140,6 +139,7 @@ const StorySection = styled(motion.div)`
   }
 
   @media (max-width: 1000px){
+    
     width: 100%;
     height: auto;
     margin: 30px 0 30px 20px;
@@ -194,4 +194,4 @@ const Hide = styled(motion.div)`
   overflow: hidden;
 `;
 
-export default MusicPlayer;
+export default GamesPage;

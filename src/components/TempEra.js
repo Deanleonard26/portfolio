@@ -20,13 +20,13 @@ const TempEra = () => {
       </CloseButton>
          <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
           <Hide>
-        <motion.h2 className='titleText' variants={titleAnim}>Code Cafe</motion.h2>
+        <motion.h2 className='titleText' variants={titleAnim}>Temp Era</motion.h2>
           </Hide>
           <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
-        <motion.h4 className='titleText' variants={titleAnim}>Hackathon</motion.h4>
+        <motion.h4 className='titleText' variants={titleAnim}>First Hackathon in Wild Code School</motion.h4>
         </Hide>
         <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
@@ -38,17 +38,14 @@ const TempEra = () => {
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
-        <motion.p className='titleText' variants={titleAnim}>Lorem Ipsum has been the iscrambled it to make a type specimen book. It has survived not 
-        nly five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</motion.p>
+        <motion.p className='titleText' variants={titleAnim}>
+          For our first Hackathon, we were tasked to create an app in 24 hours that would be sent back in time to the period of your choice to help make life easier. We decided to create a colorizer applicaiton that would be sent back to the victorian/steampunk era. The app was only available for tablets as that was the device that we would be sending back to the victorian time. 
+        </motion.p>
         </Hide>
         <Hide>
-        <motion.p className='titleText' variants={titleAnim}>Lorem Ipsum is sr took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
-        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
-         versions of Lorem Ipsum.</motion.p>
+        <motion.p className='titleText' variants={titleAnim}>
+          When the user turns on the tablet, they will be introduced with a welcome message and some instructions. From there they weill be taken to the section of the app that allows them to upload an black and white image. Then, they can press a button to colorize the image. For this hackathon we pulled images from an images API. We then used a simple function to greyscale the image and when you clicked the colorize button, the image would go back to its original.
+        </motion.p>
         </Hide>
       </motion.div>
       </StorySection>
@@ -60,7 +57,7 @@ const TempEra = () => {
 
 const StoryWrapper = styled(motion.div)`
   display:flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap-reverse;
   width:100vw;
   height: 100vh;
   background-color:white;
@@ -68,6 +65,8 @@ const StoryWrapper = styled(motion.div)`
   button {
       margin-top:30px;
       color:black;
+      text-decoration: none;
+      outline:none;
   }
 
   a {
@@ -75,15 +74,31 @@ const StoryWrapper = styled(motion.div)`
       outline:none;
       color:black;
   }
+
+  @media (max-width: 1000px){
+    width:100%;
+    min-height:100vh;
+    overflow:scroll;
+  }
+
 `
 
 const ImgWrapper = styled(motion.div)`
   width:48%;
+  height: 100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
   img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
+    width: 60%;
+    height: auto;
+  }
+  
+  @media (max-width: 1000px){
+    display:none;
+
   }
 `
 
@@ -113,6 +128,42 @@ const StorySection = styled(motion.div)`
     height: 5px;
     background-color:green;
   }
+
+  @media (max-width: 1000px){
+    
+    width: 100%;
+    height: auto;
+    margin: 30px 0 30px 20px;
+  }
+
+  @media (max-width:500px){
+    width: 100%;
+    height: auto;
+
+    h1 {
+    padding: 0.5rem 0rem;
+    font-size: 10px;
+  }
+
+  h4 {
+    padding: 0.5rem 0rem;
+    margin-top:10px;
+  }
+
+  p {
+    width: 90%;
+    margin-top:15px;
+    font-size:13px;
+    
+  }
+
+  hr {
+    width: 15%;
+    height: 5px;
+    margin-bottom:10px
+  }
+
+  }
 `
 
 const CloseButton = styled(motion.div)`
@@ -133,5 +184,6 @@ h1 {
 const Hide = styled(motion.div)`
   overflow: hidden;
 `;
+
 
 export default TempEra;

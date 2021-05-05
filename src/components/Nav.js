@@ -44,7 +44,7 @@ const Nav = () => {
     <NavWrapper>
     <LogoWrapper>
     <Link to='/'  style={{ textDecoration: "none", color: "inherit" }} >
-    <h5>Dean L</h5>
+    <h5>DL</h5>
     </Link>
     </LogoWrapper>
     <BurgerWrapper>

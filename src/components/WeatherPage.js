@@ -3,16 +3,16 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {titleAnim, pageAnimation} from '../animation'
-import music1 from "../images/music1.png";
+import weather1 from "../images/weather1.png";
 
-const MusicPlayer = () => {
+const WeatherPage = () => {
 
   return (
     <StoryWrapper variants={pageAnimation}
     initial="hidden"
     animate="show">
       <ImgWrapper >
-        <img src={music1} alt='music player' /> 
+        <img src={weather1} alt='code cafe' /> 
       </ImgWrapper>
       <StorySection>
       <CloseButton>
@@ -22,40 +22,31 @@ const MusicPlayer = () => {
       </CloseButton>
          <motion.div exit='exit' variants={pageAnimation} initial="hidden" animate="show">
           <Hide>
-        <motion.h2 className='titleText' variants={titleAnim}>Music Player</motion.h2>
+        <motion.h2 className='titleText' variants={titleAnim}>Weather Application</motion.h2>
           </Hide>
           <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
-        <motion.h4 className='titleText' variants={titleAnim}>Simo Edwin React Course Project</motion.h4>
-        </Hide>
-        <Hide>
-        <motion.hr className='titleText' variants={titleAnim}></motion.hr>
-        </Hide>
-        <Hide>
-        <motion.p className='titleText' variants={titleAnim}>React/Scss</motion.p>
+        <motion.h4 className='titleText' variants={titleAnim}>API Practice</motion.h4>
         </Hide>
         <Hide>
         <motion.hr className='titleText' variants={titleAnim}></motion.hr>
         </Hide>
         <Hide>
         <motion.p className='titleText' variants={titleAnim}>
-          After completing the 5 month bootcamp in Wild Code School I jumped into the "Dev Ed React Course" to furhter improve my skills in react. 
-          The first project that I worked on was the Waves music player. This was a very challenging project as it explored a number of new areas of react. 
-          Creating an application like this was so much fun as it showed me the complexity of a music player.
+          I created this weather app to brush up on my skills of pulling from an API and presenting the data. The application can search weather for any location in the world and will display the temperature along with the wind speed and UV index. 
         </motion.p>
         </Hide>
         <Hide>
         <motion.p className='titleText' variants={titleAnim}>
-          Some of the challenges that you encounter on this project is prop drilling and passing props through the app. I really enjoyed using scss and creating smooth animations throughout the application. 
-          Following on from the course I continued to work on the app and make it my own. I altered the layout to suit my vision, and added new icons and animations to the burger bar and creating a rotate animation when the music is playing.
+          Being able to work with APIs in react is hugley important so it was great to be able to use this applicaiton as a way to improve my skills.
         </motion.p>
         </Hide>
         <Hide>
         <motion.button 
           className='titleText' variants={titleAnim}
-          ><a href='https://youthful-montalcini-abf25f.netlify.app/' target='blank'>View Music Application </a></motion.button>
+          ><a href='https://mystifying-colden-830efa.netlify.app/' target='blank'>View Weather Application </a></motion.button>
         </Hide>
       </motion.div>
       </StorySection>
@@ -87,7 +78,7 @@ const StoryWrapper = styled(motion.div)`
 
   @media (max-width: 1000px){
     width:100%;
-    height:auto;
+    min-height:100vh;
     overflow:scroll;
   }
 
@@ -140,6 +131,7 @@ const StorySection = styled(motion.div)`
   }
 
   @media (max-width: 1000px){
+    
     width: 100%;
     height: auto;
     margin: 30px 0 30px 20px;
@@ -194,4 +186,4 @@ const Hide = styled(motion.div)`
   overflow: hidden;
 `;
 
-export default MusicPlayer;
+export default WeatherPage;

@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import {pageAnimation, fade} from '../animation'
 import useScroll from '../components/useScroll'
 import ScrollTop from '../components/ScrollTop'
-import music1 from '../images/music1.png'
+import music1 from '../images/musicMain.png'
 import temp1 from '../images/temp1.png'
 import cafe1 from '../images/cafe1.png'
 import mailio1 from '../images/mailio1.png';
@@ -35,81 +35,60 @@ const OurWork = () => {
           <Frame3 variants={slider}></Frame3>
           <Frame4 variants={slider}></Frame4>
         </motion.div> */}
-        <Movie>
-          <motion.h2  ref={controls}
-          variants={fade}></motion.h2>
-          <a href='https://brave-spence-b5da41.netlify.app/' target="blank">
+        
+        <Movie variants={controls}>
+            <Link to="/work/music">
               <img src={music1} alt="music" />
-              </a>
+            </Link>
         </Movie>
   
-        <Movie ref={element}
-          variants={fade} >
-          {/* <motion.div variants={lineAnim} className="line"></motion.div> */}
-          <a href=' https://the-authors.netlify.app/' target='blank'>
-            <img src={authors2} alt="authors" />
-            </a>
+        <Movie ref={element} variants={fade} >
+            <Link to="/work/authors">
+              <img src={authors2} alt="authors" />
+            </Link>
         </Movie>
   
-        <Movie
-          ref={element}
-          variants={fade}
-        >
-          <Link to="/work/cafe">
-            <img src={cafe1} alt="code cafe" />
-          </Link>
+        <Movie ref={element} variants={fade}>
+            <Link to="/work/cafe">
+              <img src={cafe1} alt="code cafe" />
+            </Link>
         </Movie>
 
-  
-        <Movie
-        className="span3"
-          ref={element}
-          variants={fade}
-        >
-        <a href=' https://vigilant-sammet-febf50.netlify.app/' target='blank'>
-            <img src={mailio1} alt="mailio" />
-          </a>
+        <Movie className="span3" ref={element} variants={fade}>
+            <Link to="/work/mailio">
+              <img src={mailio1} alt="mailio" />
+            </Link>
         </Movie>
   
-        <Movie
-          ref={element}
-          variants={fade}
-        >
-        <a href='https://zen-albattani-4c735b.netlify.app/' target='blank'>
-            <img src={safe1} alt="goodtimes" />
-          </a>
+        <Movie ref={element} variants={fade}>
+            <Link to="/work/safe-travel">
+              <img src={safe1} alt="goodtimes" />
+            </Link>
         </Movie>
 
-  
-        <Movie
-          ref={element}
-          variants={fade}
-        >
-          <Link to="/work/temp-era">
-            <img src={temp1} alt="temp" />
-          </Link>
+        <Movie ref={element} variants={fade}>
+            <Link to="/work/temp-era">
+              <img src={temp1} alt="temp" />
+            </Link>
         </Movie>
-        <Movie
-          ref={element}
-          variants={fade}
-        >
-          <Link to="/work/temp-era">
-            <img src={weather1} alt="temp" />
-          </Link>
+
+        <Movie ref={element} variants={fade}>
+            <Link to="/work/weather">
+              <img src={weather1} alt="temp" />
+            </Link>
         </Movie>
-        <Movie
-          ref={element}
-          variants={fade}
-        >
-          <Link to="/work/temp-era">
-            <img src={igniteMain} alt="temp" />
-          </Link>
-          
+
+        <Movie ref={element} variants={fade}>
+            <Link to="/work/games">
+              <img src={igniteMain} alt="temp" />
+            </Link>  
         </Movie>
 
         <ScrollTop />
-      </Work>
-      </Wrapper>
+        
+        </Work>
+      
+        </Wrapper>
     );
   };
 
