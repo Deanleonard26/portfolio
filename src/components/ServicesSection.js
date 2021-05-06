@@ -255,6 +255,12 @@ const Card = styled.div`
     cursor:pointer;
   }
 
+  @media (min-width: 1300px){
+    img {
+      height: 290px;
+    }
+  }
+
 
 `;
 
