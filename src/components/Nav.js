@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 // import { useLocation } from "react-router-dom";
 import logo from '../images/logo.png';
 import { ScrollTo } from "react-scroll-to";
-import ScrollTop from './ScrollTop';
 
 const Menu = ({ open, setOpen })  => {
 
