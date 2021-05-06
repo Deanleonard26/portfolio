@@ -255,6 +255,12 @@ const Card = styled.div`
     cursor:pointer;
   }
 
+  @media (max-width: 400px){
+    img {
+      height: 140px;
+    }
+  }
+
   @media (min-width: 1300px){
     img {
       height: 290px;
