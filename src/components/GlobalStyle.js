@@ -14,7 +14,7 @@ html{
     
 }
 body{
-    background: #1b1b1b;
+    background: rgb(22,22,22);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     background-image: #8a008a;

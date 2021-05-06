@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 // import { motion } from "framer-motion";
 // import { useLocation } from "react-router-dom";
-// import logo from '../images/3.png'
+import logo from '../images/logo.png'
 
 const Menu = ({ open, setOpen })  => {
 
@@ -44,7 +44,7 @@ const Nav = () => {
     <NavWrapper>
     <LogoWrapper>
     <Link to='/'  style={{ textDecoration: "none", color: "inherit" }} >
-    <h5>DL</h5>
+    <img src={logo} alt='logo' />
     </Link>
     </LogoWrapper>
     <BurgerWrapper>
@@ -76,6 +76,9 @@ const LogoWrapper = styled.div`
   margin-top:45px;
   margin-left:5%;
   
+  img {
+    width: 120px;
+  }
 
   @media(max-width:500px) {
     margin-left:10%;
