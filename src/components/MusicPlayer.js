@@ -41,7 +41,7 @@ const MusicPlayer = () => {
         </Hide>
         <Hide>
         <motion.p className='titleText' variants={titleAnim}>
-          After completing the 5 month bootcamp in Wild Code School I jumped into the "Dev Ed React Course" to furhter improve my skills in react. 
+          After completing the 5 month bootcamp in Wild Code School I jumped into the "Dev Ed React Course" to further improve my skills in react. 
           The first project that I worked on was the Waves music player. This was a very challenging project as it explored a number of new areas of react. 
           Creating an application like this was so much fun as it showed me the complexity of a music player.
         </motion.p>

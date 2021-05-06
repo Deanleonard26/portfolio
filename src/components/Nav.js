@@ -3,14 +3,20 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 // import { motion } from "framer-motion";
 // import { useLocation } from "react-router-dom";
-import logo from '../images/logo.png'
+import logo from '../images/logo.png';
+import { ScrollTo } from "react-scroll-to";
+import ScrollTop from './ScrollTop';
 
 const Menu = ({ open, setOpen })  => {
 
   return (
     <StyledMenu open={open}>
        <Link to='/' open={open} onClick={() => setOpen(!open)}>
-       <span className='nav-span'>About</span>  
+       <ScrollTo>
+       {({ scroll }) => (
+       <span onClick={() => scroll({ x: 50, y: 1950 })} className='nav-span'>About</span>  
+       )}
+       </ScrollTo>
        </Link>
       <Link to='/work' open={open} onClick={() => setOpen(!open)}>
       <span className='nav-span'>Projects</span> 
@@ -40,6 +46,7 @@ const Burger = ({ open, setOpen }) => {
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
+  
   return (
     <NavWrapper>
     <LogoWrapper>
@@ -73,11 +80,11 @@ const NavWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   width: 100%;
-  margin-top:45px;
-  margin-left:5%;
+  margin-top:35px;
+  margin-left:8%;
   
   img {
-    width: 120px;
+    width: 100px;
   }
 
   @media(max-width:500px) {
@@ -181,7 +188,7 @@ const BurgerWrapper = styled.div`
 const StyledBurger = styled.button`
   position:fixed;
   top: 5%;
-  right:5rem;
+  right:6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
